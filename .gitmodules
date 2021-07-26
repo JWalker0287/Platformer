@@ -1,0 +1,3 @@
+[submodule "Assets/Paraphernalia"]
+	path = Assets/Paraphernalia
+	url = git@bitbucket.org:q_bert_reynolds/paraphernalia.git
