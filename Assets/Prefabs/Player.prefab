@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  jumpHeight: 3
+  jumpHeight: 3.1
   envLayer:
     serializedVersion: 2
     m_Bits: 1024
