@@ -12,3 +12,4 @@ Nolan Baker - project mentor
 Zach Lowe - working on light trigger that will restore the magic
 Jonathan Walker - level design
 Ryan Ansus - enemy AI
+Robert Crutchfield - Modeling assets
