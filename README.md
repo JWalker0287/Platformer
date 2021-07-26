@@ -5,3 +5,7 @@ gets his powers from the moon and is on a quest to find secret treasure hidden i
 In Knightfall, the player will cut through enemies with his sword and blast them with magic fireballs.  The 
 player will have to reforge their sword when the sword inevitably breaks, and can replenish their magic by 
 standing in the moonlight.
+
+# Team
+
+Nolan Baker - project mentor
