@@ -7,8 +7,7 @@ player will have to reforge their sword when the sword inevitably breaks, and ca
 standing in the moonlight.
 
 # Team
-
-Nolan Baker - project mentor
-Zach Lowe - working on light trigger that will restore the magic
-Jonathan Walker - level design
-Ryan Ansus - enemy AI
+ - Nolan Baker - project mentor
+ - Zach Lowe - working on light trigger that will restore the magic
+ - Jonathan Walker - level design
+ - Ryan Ansus - enemy AI
