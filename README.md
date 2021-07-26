@@ -10,5 +10,5 @@ standing in the moonlight.
 
 Nolan Baker - project mentor
 Zach Lowe - working on light trigger that will restore the magic
-Jonathan Walker - I would like to work on level design
-Ryan Ansus - working on AI or the enemies
+Jonathan Walker - level design
+Ryan Ansus - enemy AI
