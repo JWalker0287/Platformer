@@ -9,3 +9,4 @@ standing in the moonlight.
 # Team
 
 Nolan Baker - project mentor
+Zach Lowe - working on light trigger that will restore the magic
