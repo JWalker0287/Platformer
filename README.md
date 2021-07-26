@@ -6,4 +6,8 @@ In Knightfall, the player will cut through enemies with his sword and blast them
 player will have to reforge their sword when the sword inevitably breaks, and can replenish their magic by 
 standing in the moonlight.
 
-Jonathan Walker: I would like to work on level design
+# Team
+
+Nolan Baker - project mentor
+Zach Lowe - working on light trigger that will restore the magic
+Jonathan Walker - I would like to work on level design
