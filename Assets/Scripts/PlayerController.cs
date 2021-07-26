@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 3;
     public LayerMask envLayer;
 
+    bool inLight;
+
     bool onGround;
     Rigidbody2D body;
     void Start()
