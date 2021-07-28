@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 164936f80b5f72444b5b3758d3d6bd67
+=======
+<<<<<<< HEAD:Assets/Scenes/JonathanScene.unity.meta
+guid: bfca13698b973164e87c0faa114505ce
+=======
+guid: 164936f80b5f72444b5b3758d3d6bd67
+>>>>>>> origin/zach:Assets/Scenes/ZachScene.unity.meta
+>>>>>>> origin/zach
 DefaultImporter:
   externalObjects: {}
   userData: 
