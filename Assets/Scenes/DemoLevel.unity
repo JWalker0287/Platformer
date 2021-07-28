@@ -13174,7 +13174,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -18646,7 +18646,7 @@ MonoBehaviour:
   target: {fileID: 1049124324}
   useFixedUpdate: 0
   offset: {x: 0, y: 1.5, z: -7}
-  speed: 1
+  speed: 3
   velocityAdjustment: {x: 0.2, y: 0, z: 0}
   platformLock: 0
   bounded: 0
