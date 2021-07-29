@@ -12,11 +12,11 @@ public class PlayerController : MonoBehaviour
 
     bool onGround;
     Rigidbody2D body;
-    ProjectileLauncher2D fireball;
+    ProjectileLauncher fireball;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        fireball = GetComponentInChildren<ProjectileLauncher2D>();
+        fireball = GetComponentInChildren<ProjectileLauncher>();
 
     }
 
@@ -34,7 +34,10 @@ public class PlayerController : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, jumpVelocity);
         }
 
-        if (Input.GetButton("Fire1")) fireball.Shoot(fireball.transform.forward);
+        if (Input.GetButton("Fire1") && fireball.Shoot(fireball.transform.right) > 0)
+        {
+            // do stuff if gun fires
+        }
 
     }
 

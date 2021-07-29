@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -13,16 +15,17 @@ public class SettingsMenu : MonoBehaviour
     {
         resolutions = Screen.resolutions;
 
-        resolutionDropdown.ClearOptions;
+        resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
 
-        for(int i = 0; i < Resolution.Length; i++)
+        for(int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + " X " + resolutions[i].height;
             
         }
     }
+    
     public void SetVolume (float volume)
     {
 
