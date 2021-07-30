@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class DoorController : MonoBehaviour
     {
         if(Input.GetKeyDown(interactButton) && inTrigger)
         {
-            Debug.Log("End of level");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
