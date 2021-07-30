@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     Rigidbody2D body;
+    public Transform player;
     public float turnAroundTime = 0;
     public float turnAroundInterval = 3;
     public float speed = 2;
@@ -16,12 +17,25 @@ public class EnemyController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         leftRight = Vector2.right;
         goingRight = true;
+        player = FindObjectOfType<PlayerController>().transform;
     }
 
     void Update()
     {
+        Vector2 diff =  player.position- transform.position;
+        if(Mathf.Abs(diff.sqrMagnitude) < 10)
+        {
+            UpdateChase(diff);
+        }
+        else
+        {
+            UpdateWander();
+        }
         body.velocity = new Vector2(speed * leftRight.x, body.velocity.y);
 
+    }
+    void UpdateWander()
+    {
         if (turnAroundTime > turnAroundInterval)
         {
             if(goingRight)
@@ -38,6 +52,12 @@ public class EnemyController : MonoBehaviour
             }
             turnAroundTime = 0;
         }
-    turnAroundTime += Time.deltaTime;
+        turnAroundTime += Time.deltaTime;
+    }
+    void UpdateChase(Vector2 d)
+    {
+        d = d.normalized;
+        transform.right = new Vector2(d.x,0);
+        leftRight = new Vector2(d.x,0); 
     }
 }
