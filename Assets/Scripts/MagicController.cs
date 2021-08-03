@@ -49,13 +49,6 @@ public class MagicController : MonoBehaviour
             if (_mana > maxMana) {
                 _mana = maxMana;
             }
-
-            // if (_mana <= 0 && prevMana > 0)
-            // {
-                
-
-                
-            // }
             
             
             if (prevMana != _mana) {
@@ -63,11 +56,6 @@ public class MagicController : MonoBehaviour
                 onAnyManaChanged(this, _mana, prevMana, maxMana);
             }
         }
-    }
-
-    
-    public bool isDead {
-        get { return mana <= 0; }
     }
     
     void Start() {
@@ -78,6 +66,13 @@ public class MagicController : MonoBehaviour
         if (restoreOnEnable) mana = maxMana;
         if (spawnInvincible) StartCoroutine("Restore");
         else _isRestoring = false;
+    }
+
+    public void UsedMagic() {
+        if (!enabled) return;
+        // if (allowRestore && restoreTime > 0.001f && gameObject.activeInHierarchy) StartCoroutine("Restore");
+        mana -= 1.0f;
+
     }
 
     IEnumerator Restore () {

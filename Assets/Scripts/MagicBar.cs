@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MagicBar : MonoBehaviour
 {
     public float speed = 10;
-    MagicController mana;
+    public MagicController magic;
     public Image bar;
 
     void Awake()
@@ -19,9 +19,15 @@ public class MagicBar : MonoBehaviour
     void Update()
     {
 
+        if (magic == null)
+        {
+
+            magic = PlayerController.player.GetComponent<MagicController>();
+
+        }
         
 
-        bar.fillAmount = Mathf.Lerp(bar.fillAmount, mana.manaPct, Time.deltaTime * speed);
+        bar.fillAmount = Mathf.Lerp(bar.fillAmount, magic.manaPct, Time.deltaTime * speed);
     
     }
 }
