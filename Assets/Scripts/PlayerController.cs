@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0) return;
+        
         GroundCheck();
         float x = Input.GetAxis("Horizontal");
         if (x != 0) transform.right = Vector2.right * x;
