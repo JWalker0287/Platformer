@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
         fireball = GetComponentInChildren<ProjectileLauncher>();
         magic = GetComponent<MagicController>();
         sDurability = GetComponent<SwordController>();
-        sword = GetComponent<GameObject>();
 
         player = this;
 
