@@ -1,46 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
-public class TextTrigger : MonoBehaviour
-{
-    public bool inTrigger = false;
-    public string interactButton = "e";
-    [TextArea]public string message = "You Are Reading a Sign";
-    public TextMesh interactDisplay;
+public class TextTrigger : MonoBehaviour {
 
-    void Awake()
+    [Multiline(8)]public string text = "Hello, World!";
+    public UnityEvent showPrompt;
+    public UnityEvent hidePrompt;
+    
+    bool prompting;
+
+    void Awake ()
     {
-        interactDisplay.text = interactButton;
-        interactDisplay.gameObject.SetActive(false);
+        hidePrompt.Invoke();
     }
 
-    void Update()
+    void OnTriggerEnter2D (Collider2D c)
     {
-        if(inTrigger)
+        if (prompting || c.GetComponentInParent<PlayerController>() == null) return;
+
+        prompting = true;
+        showPrompt.Invoke();
+        
+    }
+
+    void OnTriggerExit2D (Collider2D c)
+    {
+        if (!prompting || c.GetComponentInParent<PlayerController>() == null) return;
+
+        prompting = false;
+        hidePrompt.Invoke();
+    }
+
+    void Update ()
+    {
+        if (Time.timeScale != 0 && prompting && Input.GetButtonDown("Submit"))
         {
-            if(Input.GetKeyDown(interactButton))
-            {
-                TextUIController.textUI.DisplayText(message);
-            }
+            TextUIController.WaitText(text);
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D c)
-    {
-        PlayerController p = c.gameObject.GetComponent<PlayerController>();
-        if (p == null) return;
-        inTrigger = true;
-        interactDisplay.gameObject.SetActive(true);
-    }
-
-    void OnTriggerExit2D(Collider2D c)
-    {
-        PlayerController p = c.gameObject.GetComponent<PlayerController>();
-        if (p == null) return;
-        inTrigger = false;
-        interactDisplay.gameObject.SetActive(false);
-        TextUIController.textUI.StopReading();
     }
 }

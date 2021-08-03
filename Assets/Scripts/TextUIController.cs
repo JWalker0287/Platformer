@@ -3,66 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextUIController : MonoBehaviour
-{
-    public static TextUIController textUI;
-    public Text Text;
-    public GameObject textObject;
-    public float textDelay = 0.1f;
-    //public float nextText = 3;
+public class TextUIController : MonoBehaviour {
+
+    public static TextUIController instance;
+    public GameObject panel;
+    public Text text;
 
     static Queue<IEnumerator> textQueue = new Queue<IEnumerator>();
 
-    void Awake()
+    void Awake ()
     {
-        textObject.SetActive(false);
-        if (textUI == null) textUI = this;
+        instance = this;
+        panel.SetActive(false);
     }
 
-    // void OnEnable()
-    // {
-    //     StartCoroutine(ProcessQueueCoroutine());
-    // }
-
-    // IEnumerator ProcessQueueCoroutine()
-    // {
-    //     while(enabled)
-    //     {
-    //         while (textQueue.Count > 0)
-    //         {
-    //             textObject.SetActive(true);
-    //             yield return StartCoroutine(textQueue.Dequeue());
-    //         }
-    //         textObject.SetActive(false);
-    //         yield return null;
-    //     }
-    // }
-
-    public void DisplayText(string text)
+    void OnEnable ()
     {
-        //textQueue.Enqueue(textUI.DisplayTextCoroutine(text));
-        StartCoroutine(DisplayTextCoroutine(text));
+        StartCoroutine(ProcessQueueCoroutine());
     }
 
-    IEnumerator DisplayTextCoroutine(string text)
+    IEnumerator ProcessQueueCoroutine ()
     {
-        textObject.SetActive(true);
-        Text.text = "";
-        for (int i = 0; i < text.Length; i ++)
+        while (enabled)
         {
-            Text.text = (Text.text + text[i]);
-            yield return new WaitForSeconds(textDelay);
+            while (textQueue.Count > 0)
+            {
+                panel.SetActive(true);
+                yield return StartCoroutine(textQueue.Dequeue());
+            }
+            panel.SetActive(false);
+            yield return null;
         }
-        //yield return new WaitForSeconds(nextText);
-        //textObject.SetActive(false);
     }
 
-    public void StopReading()
+    public static void ShowText (string text)
     {
-        textQueue.Clear();
-        textObject.SetActive(false);
-        StopAllCoroutines();
-        //StartCoroutine(ProcessQueueCoroutine());
+        textQueue.Enqueue(instance.ShowTextCoroutine(text));
     }
 
+    IEnumerator ShowTextCoroutine (string text)
+    {
+        this.text.text = "";
+        for (int i = 0; i < text.Length; i++)
+        {
+            this.text.text += text[i];
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+    }
+
+    public static void WaitText (string text)
+    {
+        textQueue.Enqueue(instance.WaitTextCoroutine(text));
+    }
+
+    IEnumerator WaitTextCoroutine (string text)
+    {
+        Time.timeScale = 0;
+        yield return StartCoroutine(ShowTextCoroutine(text));
+        while (Input.GetButton("Submit")) yield return null;
+        while (!Input.GetButton("Submit")) yield return null;
+        Time.timeScale = 1;
+    }
 }
