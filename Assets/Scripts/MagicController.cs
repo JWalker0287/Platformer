@@ -49,13 +49,6 @@ public class MagicController : MonoBehaviour
             if (_mana > maxMana) {
                 _mana = maxMana;
             }
-
-            // if (_mana <= 0 && prevMana > 0)
-            // {
-                
-
-                
-            // }
             
             
             if (prevMana != _mana) {

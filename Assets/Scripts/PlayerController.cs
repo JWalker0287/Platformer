@@ -11,10 +11,16 @@ public class PlayerController : MonoBehaviour
     bool inLight;
 
     bool onGround;
+
     Rigidbody2D body;
+
     ProjectileLauncher fireball;
 
+    public GameObject sword;
+
     public MagicController magic;
+
+    public SwordController sDurability;
 
     public static PlayerController player;
 
@@ -23,9 +29,13 @@ public class PlayerController : MonoBehaviour
         
         body = GetComponent<Rigidbody2D>();
         fireball = GetComponentInChildren<ProjectileLauncher>();
-        magic = GetComponentInChildren<MagicController>();
+        magic = GetComponent<MagicController>();
+        sDurability = GetComponent<SwordController>();
+        sword = GetComponent<GameObject>();
 
         player = this;
+
+        sword.SetActive(false);
 
     }
 
@@ -51,9 +61,31 @@ public class PlayerController : MonoBehaviour
             magic.UsedMagic();
             
         }
+        
+        if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
+        {
+        
+            StartCoroutine("SwingSword");
 
-        Debug.Log(magic.mana);
+            
+            
+        }
 
+        //Debug.Log(magic.mana);
+        Debug.Log(sDurability.durability);
+
+    }
+
+    IEnumerator SwingSword()
+    {
+
+        sword.SetActive(true);
+
+        sDurability.UsedSword();
+
+        yield return new WaitForSeconds(0.5f);
+
+        sword.SetActive(false);
 
     }
 
