@@ -12,6 +12,6 @@ public class TextUIController : MonoBehaviour
     public void StoreName()
     {
         name = inputfield.GetComponent<Text>().text;
-        textDisplay.GetComponent<Text>().text = "Hello knight" + name + "Welcome";
+        textDisplay.GetComponent<Text>().text = "Hello knight " + name + " Welcome ";
     }
 }
