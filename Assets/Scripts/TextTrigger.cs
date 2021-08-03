@@ -7,7 +7,7 @@ public class TextTrigger : MonoBehaviour
 {
     public bool inTrigger = false;
     public string interactButton = "e";
-    public string message = "You Are Reading a Sign";
+    [TextArea]public string message = "You Are Reading a Sign";
     public TextMesh interactDisplay;
 
     void Awake()

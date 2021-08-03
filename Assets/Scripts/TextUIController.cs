@@ -9,6 +9,7 @@ public class TextUIController : MonoBehaviour
     public Text Text;
     public GameObject textObject;
     public float textDelay = 0.1f;
+    public float nextText = 3;
 
     static Queue<IEnumerator> textQueue = new Queue<IEnumerator>();
 
@@ -17,7 +18,7 @@ public class TextUIController : MonoBehaviour
         textObject.SetActive(false);
         if (textUI == null) textUI = this;
     }
-    
+
     void OnEnable()
     {
         StartCoroutine(ProcessQueueCoroutine());
@@ -50,7 +51,7 @@ public class TextUIController : MonoBehaviour
             Text.text = (Text.text + text[i]);
             yield return new WaitForSeconds(textDelay);
         }
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(nextText);
         textObject.SetActive(false);
     }
 
