@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd4d86f9be77458192964cea572c475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileName: 
+  projectileName: Flame
   launchDelay: 1.5
   showProjectileOnReady: 0
   spread: 0

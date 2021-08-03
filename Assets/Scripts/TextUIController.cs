@@ -8,6 +8,7 @@ public class TextUIController : MonoBehaviour {
     public static TextUIController instance;
     public GameObject panel;
     public Text text;
+    public Text promptText;
 
     static Queue<IEnumerator> textQueue = new Queue<IEnumerator>();
 
@@ -15,6 +16,7 @@ public class TextUIController : MonoBehaviour {
     {
         instance = this;
         panel.SetActive(false);
+        HidePrompt();
     }
 
     void OnEnable ()
@@ -36,6 +38,16 @@ public class TextUIController : MonoBehaviour {
         }
     }
 
+    public static void ShowPrompt (string prompt)
+    {
+        instance.promptText.text = prompt;
+    }
+
+    public static void HidePrompt ()
+    {
+        instance.promptText.text = "";
+    }
+
     public static void ShowText (string text)
     {
         textQueue.Enqueue(instance.ShowTextCoroutine(text));
@@ -49,6 +61,19 @@ public class TextUIController : MonoBehaviour {
             this.text.text += text[i];
             yield return new WaitForSecondsRealtime(0.05f);
         }
-        yield return new WaitForSecondsRealtime(3);
+    }
+
+    public static void WaitText (string text)
+    {
+        textQueue.Enqueue(instance.WaitTextCoroutine(text));
+    }
+
+    IEnumerator WaitTextCoroutine (string text)
+    {
+        Time.timeScale = 0;
+        yield return StartCoroutine(ShowTextCoroutine(text));
+        while (Input.GetButton("Submit")) yield return null;
+        while (!Input.GetButton("Submit")) yield return null;
+        Time.timeScale = 1;
     }
 }
