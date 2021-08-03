@@ -41,5 +41,6 @@ public class TextTrigger : MonoBehaviour
         if (p == null) return;
         inTrigger = false;
         interactDisplay.gameObject.SetActive(false);
+        TextUIController.textUI.StopReading();
     }
 }

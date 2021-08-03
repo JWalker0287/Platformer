@@ -9,7 +9,7 @@ public class TextUIController : MonoBehaviour
     public Text Text;
     public GameObject textObject;
     public float textDelay = 0.1f;
-    public float nextText = 3;
+    //public float nextText = 3;
 
     static Queue<IEnumerator> textQueue = new Queue<IEnumerator>();
 
@@ -19,29 +19,31 @@ public class TextUIController : MonoBehaviour
         if (textUI == null) textUI = this;
     }
 
-    void OnEnable()
-    {
-        StartCoroutine(ProcessQueueCoroutine());
-    }
+    // void OnEnable()
+    // {
+    //     StartCoroutine(ProcessQueueCoroutine());
+    // }
 
-    IEnumerator ProcessQueueCoroutine()
-    {
-        while(enabled)
-        {
-            while (textQueue.Count > 0)
-            {
-                textObject.SetActive(true);
-                yield return StartCoroutine(textQueue.Dequeue());
-            }
-            textObject.SetActive(false);
-            yield return null;
-        }
-    }
+    // IEnumerator ProcessQueueCoroutine()
+    // {
+    //     while(enabled)
+    //     {
+    //         while (textQueue.Count > 0)
+    //         {
+    //             textObject.SetActive(true);
+    //             yield return StartCoroutine(textQueue.Dequeue());
+    //         }
+    //         textObject.SetActive(false);
+    //         yield return null;
+    //     }
+    // }
 
     public void DisplayText(string text)
     {
-        textQueue.Enqueue(textUI.DisplayTextCoroutine(text));
+        //textQueue.Enqueue(textUI.DisplayTextCoroutine(text));
+        StartCoroutine(DisplayTextCoroutine(text));
     }
+
     IEnumerator DisplayTextCoroutine(string text)
     {
         textObject.SetActive(true);
@@ -51,8 +53,16 @@ public class TextUIController : MonoBehaviour
             Text.text = (Text.text + text[i]);
             yield return new WaitForSeconds(textDelay);
         }
-        yield return new WaitForSeconds(nextText);
+        //yield return new WaitForSeconds(nextText);
+        //textObject.SetActive(false);
+    }
+
+    public void StopReading()
+    {
+        textQueue.Clear();
         textObject.SetActive(false);
+        StopAllCoroutines();
+        //StartCoroutine(ProcessQueueCoroutine());
     }
 
 }

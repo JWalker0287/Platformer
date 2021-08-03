@@ -591,7 +591,6 @@ MonoBehaviour:
   Text: {fileID: 529807781}
   textObject: {fileID: 1336022923}
   textDelay: 0.02
-  nextText: 3
 --- !u!114 &373261932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3861,7 +3860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5643408865581447154, guid: d5a9d8d114016ef4d9979341f6e6cfb1, type: 3}
       propertyPath: message
-      value: if you read it too quickly, the messages form a queue
+      value: You can stop reading by walking away
       objectReference: {fileID: 0}
     - target: {fileID: 6261882943877634080, guid: d5a9d8d114016ef4d9979341f6e6cfb1, type: 3}
       propertyPath: m_RootOrder
