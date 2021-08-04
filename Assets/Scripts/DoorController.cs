@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
-    public bool inTrigger = false;
+    public int doorID;
+    public int destinationID;
+    public string scene;
+
+    bool inTrigger = false;
     public string interactButton = "e";
     void Update()
     {
         if(Input.GetKeyDown(interactButton) && inTrigger)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManager.OpenDoor(destinationID, scene);
         }
     }
 

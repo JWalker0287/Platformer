@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     Rigidbody2D body;
-    public Transform player;
     public float turnAroundTime = 0;
     public float turnAroundInterval = 3;
     public float speed = 2;
@@ -17,12 +16,11 @@ public class EnemyController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         leftRight = Vector2.right;
         goingRight = true;
-        player = FindObjectOfType<PlayerController>().transform;
     }
 
     void Update()
     {
-        Vector2 diff =  player.position- transform.position;
+        Vector2 diff =  PlayerController.player.transform.position - transform.position;
         if(Mathf.Abs(diff.sqrMagnitude) < 10)
         {
             UpdateChase(diff);

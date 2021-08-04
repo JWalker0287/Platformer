@@ -23,7 +23,18 @@ public class PlayerController : MonoBehaviour
     public SwordController sDurability;
 
     public static PlayerController player;
-
+    void Awake ()
+    {
+        if (player == null) 
+        {
+            player = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         
