@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1261737782152803238}
   - component: {fileID: 2810857486575438530}
   - component: {fileID: 8241260261238169853}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,8 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3134da85f41299749a7c7585f2dbcdf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inTrigger: 0
-  interactButton: e
+  showPrompt:
+    m_PersistentCalls:
+      m_Calls: []
+  hidePrompt:
+    m_PersistentCalls:
+      m_Calls: []
+  doorID: 0
+  destinationID: 0
+  scene: 
 --- !u!61 &8241260261238169853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85,7 +92,7 @@ GameObject:
   - component: {fileID: 3876551016876633210}
   - component: {fileID: 8745655490253658699}
   - component: {fileID: 3399333029059661122}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -110,6 +110,9 @@ MonoBehaviour:
   envLayer:
     serializedVersion: 2
     m_Bits: 1024
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 8192
   sword: {fileID: 6229874671752281523}
   magic: {fileID: 89016407914573254}
   sDurability: {fileID: 8906892285018696323}

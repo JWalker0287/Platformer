@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TextTrigger : MonoBehaviour {
-
-    [Multiline(8)]public string text = "Hello, World!";
+public class Interactable : MonoBehaviour
+{
     public UnityEvent showPrompt;
     public UnityEvent hidePrompt;
     
-    bool prompting;
+    protected bool prompting;
+
+    public virtual void Interact()
+    {
+        Debug.Log("Override me.");
+    }
+
+    public virtual bool CanInteract()
+    {
+        return (Time.timeScale != 0 && prompting);
+    }
 
     void Awake ()
     {
@@ -31,13 +40,5 @@ public class TextTrigger : MonoBehaviour {
 
         prompting = false;
         hidePrompt.Invoke();
-    }
-
-    void Update ()
-    {
-        if (Time.timeScale != 0 && prompting && Input.GetButtonDown("Submit"))
-        {
-            TextUIController.WaitText(text);
-        }
     }
 }
