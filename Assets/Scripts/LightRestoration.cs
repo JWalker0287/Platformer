@@ -4,45 +4,27 @@ using UnityEngine;
 
 public class LightRestoration : MonoBehaviour
 {
-    
     bool inLight = false;
 
-    public MagicController magic;
-
-    void start()
-    {
-
-        magic = GetComponent<MagicController>();
-        
-    }
-
+    MagicController magic;
     void OnTriggerEnter2D (Collider2D c)
     {
-
+        magic = c.GetComponentInParent<MagicController>();
         inLight = true;
-
-        RestoreMana();
-
     }
 
     void OnTriggerExit2D (Collider2D c)
     {
-
+        magic = null;
         inLight = false;
-
     }
 
-    void RestoreMana()
+    void Update()
     {
-
-        while (inLight == true && magic.mana != magic.maxMana)
+        if (inLight == true && magic != null && magic.mana != magic.maxMana)
         {
-
             magic.mana += 0.1f;
-
         }
-
-
     }
 
 

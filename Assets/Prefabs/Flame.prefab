@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8966575716407453755}
   - component: {fileID: -6790649533849179985}
   - component: {fileID: 3336806425186496901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45a35227714c426da8ee187ffac9b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
   speedVariation: 0
   lifetime: 3
   size: 1
