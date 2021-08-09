@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Debug.Log(magic.mana);
-        Debug.Log(sDurability.durability);
+        // Debug.Log(sDurability.durability);
 
     }
 
