@@ -110,8 +110,8 @@ MonoBehaviour:
   gunVelocityDamping: 0.1
   particles: {fileID: 0}
   audioMixerName: 
-  onFireAudioClipName: 
-  onHitAudioClipName: 
+  onFireAudioClipName: LaunchFireBall
+  onHitAudioClipName: FireBallHit
   audioSpatialBlend: 0
   screenSpacePan: 0
   scaleImpactVolume: 0

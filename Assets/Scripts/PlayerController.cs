@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Paraphernalia.Components;
 
 public class PlayerController : MonoBehaviour
 {
@@ -89,6 +90,7 @@ public class PlayerController : MonoBehaviour
 
         if (onGround && Input.GetButtonDown("Jump"))
         {
+            AudioManager.PlayVariedEffect("Jump");
             float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
             body.velocity = new Vector2(body.velocity.x, jumpVelocity);
         }
@@ -97,7 +99,6 @@ public class PlayerController : MonoBehaviour
         {
         
             fireball.Shoot(fireball.transform.right);
-
             magic.UsedMagic();
             
         }
@@ -116,15 +117,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator SwingSword()
     {
-
         sword.SetActive(true);
-
         sDurability.UsedSword();
-
+        AudioManager.PlayVariedEffect("SwordWoosh");
         yield return new WaitForSeconds(0.5f);
-
         sword.SetActive(false);
-
     }
 
     void GroundCheck ()

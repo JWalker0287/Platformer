@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8792686093110522965
 Transform:
   m_ObjectHideFlags: 0
@@ -133,14 +133,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f231687b2d61d16478124a1a31cc6cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sword: {fileID: 3141539478343856302}
   speed: 6
   jumpHeight: 3.2
   envLayer:
     serializedVersion: 2
     m_Bits: 1024
-  sword: {fileID: 3141539478343856302}
-  magic: {fileID: 926387386190159892}
-  sDurability: {fileID: 6320586502035980241}
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  defaultPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &7080946843209856566
 Rigidbody2D:
   serializedVersion: 4
@@ -201,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreTags: []
-  damageSoundName: 
+  damageSoundName: TakeDamage
   deathSoundName: 
   resurectionSoundName: 
   destructionSoundName: 
@@ -345,6 +347,7 @@ GameObject:
   - component: {fileID: 5070935242074754157}
   - component: {fileID: 4213293227737333887}
   - component: {fileID: 498032908244923456}
+  - component: {fileID: 3922590447938739781}
   m_Layer: 12
   m_Name: Sword
   m_TagString: Untagged
@@ -427,7 +430,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -443,6 +446,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &3922590447938739781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141539478343856302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ae274168be4981a4abf1df610a69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  outwardForce: 0
+  damage: 10
+  multiplier: 1
+  disableOnCollision: 0
+  affectAncestor: 0
+  allowRecovery: 1
+  hitSoundName: SwordHitEnemy
+  ignoreTags: []
 --- !u!1 &4772879802501837139
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5667765550514008008
 Transform:
   m_ObjectHideFlags: 0
@@ -652,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileName: Flame
-  launchDelay: 1.5
+  launchDelay: 0.2
   showProjectileOnReady: 0
   spread: 0
   accuracy: 1
