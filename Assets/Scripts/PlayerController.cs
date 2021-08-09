@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 2;
     public float jumpHeight = 3;
     public LayerMask envLayer;
+    public LayerMask interactLayer;
 
     bool inLight;
 
@@ -23,7 +24,18 @@ public class PlayerController : MonoBehaviour
     public SwordController sDurability;
 
     public static PlayerController player;
-
+    void Awake ()
+    {
+        if (player == null) 
+        {
+            player = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         
@@ -38,8 +50,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void InteractCheck ()
+    {
+        if (!Input.GetButtonDown("Submit")) return;
+
+        Collider2D c = Physics2D.OverlapCircle(transform.position, 0.5f, interactLayer);
+        if (c != null)
+        {
+            Interactable i = c.GetComponent<Interactable>();
+            if (i.CanInteract()) i.Interact();
+        }
+    }
+
     void Update()
     {
+        InteractCheck();
         GroundCheck();
         float x = Input.GetAxis("Horizontal");
         if (x != 0) transform.right = Vector2.right * x;

@@ -3,47 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextUIController : MonoBehaviour
-{
+public class TextUIController : MonoBehaviour {
 
-    public Text textBox;
+    public static TextUIController instance;
+    public GameObject panel;
+    public Text text;
 
-    void Awake()
+    static Queue<IEnumerator> textQueue = new Queue<IEnumerator>();
+
+    void Awake ()
     {
-
-        textBox.enabled = false;
-
+        instance = this;
+        panel.SetActive(false);
     }
 
-    void Update()
+    void OnEnable ()
     {
+        StartCoroutine(ProcessQueueCoroutine());
+    }
 
-        if (Input.GetButton("Fire1") && textBox.enabled == true)
+    IEnumerator ProcessQueueCoroutine ()
+    {
+        while (enabled)
         {
-
-            ReadSign();
-
+            while (textQueue.Count > 0)
+            {
+                panel.SetActive(true);
+                yield return StartCoroutine(textQueue.Dequeue());
+            }
+            panel.SetActive(false);
+            yield return null;
         }
-
     }
 
-    public void SignInteraction()
+    public static void ShowText (string text)
     {
-
-        textBox.enabled = true;
-
-        textBox.text = "Press Swing to read.";
-
+        textQueue.Enqueue(instance.ShowTextCoroutine(text));
     }
 
-    void ReadSign()
+    IEnumerator ShowTextCoroutine (string text)
     {
-
-        textBox.text = "Wow you can read! Congratulations!!!!";
-
+        this.text.text = "";
+        for (int i = 0; i < text.Length; i++)
+        {
+            this.text.text += text[i];
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
     }
 
-    
+    public static void WaitText (string text)
+    {
+        textQueue.Enqueue(instance.WaitTextCoroutine(text));
+    }
 
-
+    IEnumerator WaitTextCoroutine (string text)
+    {
+        Time.timeScale = 0;
+        yield return StartCoroutine(ShowTextCoroutine(text));
+        while (Input.GetButton("Submit")) yield return null;
+        while (!Input.GetButton("Submit")) yield return null;
+        Time.timeScale = 1;
+    }
 }
