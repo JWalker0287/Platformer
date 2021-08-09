@@ -7,20 +7,56 @@ using Paraphernalia.Components;
 
 public class GameManager : MonoBehaviour
 {
-    public Image transitionImage;
     public static GameManager game;
+    
+    public Image transitionImage;
+    public GameOverScreen gameOverScreen;
+    
+    int points = 0;
+    
     void Awake ()
     {
         if (game == null) 
         {
             game = this;
             DontDestroyOnLoad(gameObject);
+            gameOverScreen.gameObject.SetActive(false);
         }
         else 
         {
             Destroy(gameObject);
         }
     }
+
+    public static void GameOver()
+    {
+        game.gameOverScreen.Setup(game.points);
+    }
+
+    public static void ReloadScene ()
+    {
+         game.StartCoroutine(game.ReloadSceneCoroutine());
+    }
+
+    IEnumerator ReloadSceneCoroutine ()
+    {
+        Time.timeScale = 0;
+        transitionImage.enabled = true;
+        yield return StartCoroutine(Fade(Color.clear, Color.black));
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        PlayerController.player.transform.position = PlayerController.player.defaultPosition;
+        CameraController.instance.SetPosition();
+        
+        game.gameOverScreen.gameObject.SetActive(false);
+        
+        yield return StartCoroutine(Fade(Color.black,Color.clear));
+        transitionImage.enabled = false;
+        Time.timeScale = 1;
+    }
+
     public static void OpenDoor(int doorID, string scene)
     {
         game.StartCoroutine(game.OpenDoorCoroutine(doorID, scene));
