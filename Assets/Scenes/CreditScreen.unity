@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 408835619}
   - component: {fileID: 408835621}
   - component: {fileID: 408835620}
+  - component: {fileID: 408835622}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -155,10 +156,10 @@ RectTransform:
   m_Father: {fileID: 1653924558}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035, y: -0.0025024}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.49993896, y: 24.25}
+  m_SizeDelta: {x: 0, y: -48.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408835620
 MonoBehaviour:
@@ -182,7 +183,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0dd39ab8f52b11c48989580b70bf0fda, type: 3}
-    m_FontSize: 34
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -206,20 +207,7 @@ MonoBehaviour:
     Lowe
 
 
-    Ryan Ansus
-
-
-    Heart Icons by ChickenTeddy
-
-
-    Points Font by
-    Uni 05_53
-
-
-    Stand-in sword icon by Ian Peter
-
-
-'
+    Ryan Ansus'
 --- !u!222 &408835621
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -228,6 +216,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408835618}
   m_CullTransparentMesh: 1
+--- !u!114 &408835622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408835618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851d7d5782c7c324194b92dd79c01c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: credits.txt
 --- !u!1 &545031304
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,10 +439,10 @@ RectTransform:
   m_Father: {fileID: 1653924558}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -843, y: -485}
-  m_SizeDelta: {x: 329.8218, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 186.5, y: 33.5}
+  m_SizeDelta: {x: 328.8218, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418056951
 MonoBehaviour:
