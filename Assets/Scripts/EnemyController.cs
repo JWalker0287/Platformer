@@ -20,6 +20,8 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        if (PlayerController.player == null) return;
+        
         Vector2 diff =  PlayerController.player.transform.position - transform.position;
         if(Mathf.Abs(diff.sqrMagnitude) < 10)
         {

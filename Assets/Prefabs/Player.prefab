@@ -133,14 +133,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f231687b2d61d16478124a1a31cc6cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sword: {fileID: 3141539478343856302}
   speed: 6
   jumpHeight: 3.2
   envLayer:
     serializedVersion: 2
     m_Bits: 1024
-  sword: {fileID: 3141539478343856302}
-  magic: {fileID: 926387386190159892}
-  sDurability: {fileID: 6320586502035980241}
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 8192
+  defaultPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &7080946843209856566
 Rigidbody2D:
   serializedVersion: 4
@@ -652,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileName: Flame
-  launchDelay: 1.5
+  launchDelay: 0.2
   showProjectileOnReady: 0
   spread: 0
   accuracy: 1

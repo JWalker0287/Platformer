@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 3771773717897740362}
   - component: {fileID: 1805655993648829971}
   - component: {fileID: 4599548934694721753}
+  - component: {fileID: 8808707754119117251}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -264,6 +265,18 @@ MonoBehaviour:
   sfxGroupPath: Master/SFX
   sfxSourcesCount: 5
   minPlayInterval: 0.01
+--- !u!114 &8808707754119117251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771773717897740363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31f0634a2cb6344ba90f6a86cdb8518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8586222812127142033
 GameObject:
   m_ObjectHideFlags: 0
