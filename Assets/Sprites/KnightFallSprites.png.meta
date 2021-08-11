@@ -61,7 +61,7 @@ TextureImporter:
     second: skeleton_pelvis
   - first:
       213: 3051704404270442554
-    second: KnightFallSprites_19
+    second: gradient
   - first:
       213: 1598763479970183684
     second: skeleton_leg_lower_right
@@ -7979,6 +7979,27 @@ TextureImporter:
       bones: []
       spriteID: ad988268f3843dda0800000000000000
       internalID: -5921309647391127078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gradient
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 741
+        width: 138
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38e800bcf4d95a20800000000000000
+      internalID: 3051704404270442554
       vertices: []
       indices: 
       edges: []
