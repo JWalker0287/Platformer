@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     MagicController magic;
     SwordController sDurability;
     HealthController health;
+    Animator anim;
 
     public Vector3 defaultPosition;
     
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
             sDurability = GetComponent<SwordController>();
+            anim = GetComponent<Animator>();
         }
         else 
         {
@@ -111,6 +113,8 @@ public class PlayerController : MonoBehaviour
 
         //Debug.Log(magic.mana);
         // Debug.Log(sDurability.durability);
+
+        anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
 
     }
 
