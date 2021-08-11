@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144969809}
   - component: {fileID: 144969810}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlameThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6152675735799129306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198036850008744876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,13 +128,13 @@ GameObject:
   - component: {fileID: 7535308654126598091}
   - component: {fileID: 4169181604376007610}
   - component: {fileID: 546307328971861871}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: swoosh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4771068281515774241
 Transform:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5921309647391127078, guid: 18ca99cf608da534ebca8572aa84fa65, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -213,12 +213,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 0, y: 0, z: 0}
-  outwardForce: 0
+  outwardForce: 100
   damage: 1
   multiplier: 1
   disableOnCollision: 0
-  affectAncestor: 0
-  allowRecovery: 1
+  affectAncestor: 1
+  allowRecovery: 0
   hitSoundName: 
   ignoreTags: []
 --- !u!60 &546307328971861871
@@ -228,10 +228,10 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369694889042009480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -280,7 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2491398123996003023}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3444650930322007443}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2846991762926732962}
   - component: {fileID: 3728768984332146147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftLegSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 7293799422261470540}
   - component: {fileID: 219552007351533699}
   - component: {fileID: 922451944190280631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 6760304781407695774}
   - component: {fileID: 6760304781407695761}
   - component: {fileID: 3147590616171311962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760304782005708962}
   - component: {fileID: 6760304782005708965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760304782355746128}
   - component: {fileID: 6760304782355746131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760304782449073333}
   - component: {fileID: 6760304782449073332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760304782466842292}
   - component: {fileID: 6760304782466842295}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760304782572620297}
   - component: {fileID: 6760304782572620296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1043,7 @@ GameObject:
   - component: {fileID: 1442139381}
   - component: {fileID: 973102614417289583}
   - component: {fileID: 3228128313066058794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Knight
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1264,7 +1264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760304783006730176}
   - component: {fileID: 6760304783006730179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4754115679951614420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1375,7 +1375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5306064468423981663}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1406,7 +1406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2986039735232210274}
   - component: {fileID: 1682220249220120967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightLegSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1476,11 +1476,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 387093554748832546, guid: f70007841eb52494db11cb1f2b595d00, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 387093554748832546, guid: f70007841eb52494db11cb1f2b595d00, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105785617042831952, guid: f70007841eb52494db11cb1f2b595d00, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9121350593191698014, guid: f70007841eb52494db11cb1f2b595d00, type: 3}
       propertyPath: m_RootOrder

@@ -25,8 +25,15 @@ public class EnemyController : MonoBehaviour
         if (PlayerController.player == null) return;
 
         Vector2 diff =  PlayerController.player.transform.position - transform.position;
-        if(Mathf.Abs(diff.sqrMagnitude) < 10)
+        float distSq = diff.sqrMagnitude;
+        if (distSq < 2)
         {
+            if (anim) anim.SetTrigger("sword");
+            leftRight.x = 0;
+        }
+        else if(distSq < 10)
+        {
+            if (anim) anim.ResetTrigger("sword");
             UpdateChase(diff);
         }
         else
@@ -34,7 +41,7 @@ public class EnemyController : MonoBehaviour
             UpdateWander();
         }
         body.velocity = new Vector2(speed * leftRight.x, body.velocity.y);
-        anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
+        if (anim) anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
 
     }
     void UpdateWander()

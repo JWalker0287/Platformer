@@ -101,7 +101,7 @@ MonoBehaviour:
   damage: 1
   multiplier: 1
   disableOnCollision: 0
-  affectAncestor: 0
+  affectAncestor: 1
   allowRecovery: 1
   hitSoundName: 
   ignoreTags: []
@@ -756,6 +756,8 @@ GameObject:
   - component: {fileID: 7963812347488158226}
   - component: {fileID: 6820386742623883651}
   - component: {fileID: 6820386742623883650}
+  - component: {fileID: 6820386742623883655}
+  - component: {fileID: 6820386742623883656}
   m_Layer: 7
   m_Name: Skelleton
   m_TagString: Untagged
@@ -857,6 +859,63 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &6820386742623883655
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967249389020587618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2044797, y: 0.9}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8714695, y: 1.6}
+  m_EdgeRadius: 0.1
+--- !u!114 &6820386742623883656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967249389020587618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31839d8b31cce4d798caa4e0d9e650d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreTags: []
+  damageSoundName: 
+  deathSoundName: 
+  resurectionSoundName: 
+  destructionSoundName: 
+  damageParticlesName: 
+  deathParticlesName: 
+  destructionParticlesName: 
+  destructionSpawnName: 
+  anim: {fileID: 0}
+  damageTriggerName: 
+  deathTriggerName: 
+  resurectionTriggerName: 
+  audioSpatialBlend: 0
+  recoveryTime: 0
+  spawnInvincible: 0
+  healOnEnable: 0
+  _maxHealth: 3
+  destructionHealth: -1
 --- !u!1 &6350037955003295219
 GameObject:
   m_ObjectHideFlags: 0

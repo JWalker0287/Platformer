@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8966575716407453755}
   - component: {fileID: -6790649533849179985}
   - component: {fileID: 3336806425186496901}
+  - component: {fileID: -9051725738284170818}
   m_Layer: 8
   m_Name: FireBall
   m_TagString: Untagged
@@ -160,6 +161,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &-9051725738284170818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387093554748832546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ae274168be4981a4abf1df610a69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  outwardForce: 0
+  damage: 1
+  multiplier: 1
+  disableOnCollision: 0
+  affectAncestor: 1
+  allowRecovery: 0
+  hitSoundName: 
+  ignoreTags: []
 --- !u!1001 &5250945990515059844
 PrefabInstance:
   m_ObjectHideFlags: 0
