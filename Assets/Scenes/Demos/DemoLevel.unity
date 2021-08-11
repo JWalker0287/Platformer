@@ -46420,7 +46420,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5967249389020587618, guid: 24259f286a5be264aa0e418b385280a2, type: 3}
       propertyPath: m_Name
-      value: Skelleton
+      value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 6705140293396677384, guid: 24259f286a5be264aa0e418b385280a2, type: 3}
       propertyPath: m_RootOrder

@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 6820386742623883655}
   - component: {fileID: 6820386742623883656}
   m_Layer: 7
-  m_Name: Skelleton
+  m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,7 +793,7 @@ Animator:
   m_GameObject: {fileID: 5967249389020587618}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 2b537b76c448873478ae0b8a1c46dddc, type: 2}
+  m_Controller: {fileID: 22100000, guid: 694fc26f4e511be49ba8621afb9945d3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
