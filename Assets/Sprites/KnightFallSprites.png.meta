@@ -52,7 +52,7 @@ TextureImporter:
     second: upper_leg
   - first:
       213: -5921309647391127078
-    second: lower_leg
+    second: swoosh
   - first:
       213: 6783055755787558793
     second: skeleton_hand
@@ -7937,6 +7937,52 @@ TextureImporter:
         boneIndex[1]: 0
         boneIndex[2]: 0
         boneIndex[3]: 0
+    - serializedVersion: 2
+      name: swoosh
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 829
+        width: 349
+        height: 195
+      alignment: 9
+      pivot: {x: 0.28405088, y: 0.49845752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 131.5, y: -35.5}
+        - {x: 149.5, y: -16.5}
+        - {x: 149.5, y: 4.5}
+        - {x: 128.5, y: 33.5}
+        - {x: 31.5, y: 71.5}
+        - {x: 0.5, y: 75.5}
+        - {x: -27.5, y: 78.5}
+        - {x: -91.5, y: 89.5}
+        - {x: -122.5, y: 89.5}
+        - {x: -125.5, y: 87.5}
+        - {x: -125.5, y: 83.5}
+        - {x: -114.5, y: 79.5}
+        - {x: -44.5, y: 55.5}
+        - {x: 0.5, y: 39.5}
+        - {x: 57.5, y: -6.5}
+        - {x: 21.5, y: -48.5}
+        - {x: -23.5, y: -58.5}
+        - {x: -136.5, y: -72.5}
+        - {x: -138.5, y: -76.5}
+        - {x: -138.5, y: -80.5}
+        - {x: -128.5, y: -83.5}
+        - {x: -50.5, y: -83.5}
+        - {x: -33.5, y: -82.5}
+        - {x: 33.5, y: -73.5}
+        - {x: 96.5, y: -54.5}
+      tessellationDetail: 0.08
+      bones: []
+      spriteID: ad988268f3843dda0800000000000000
+      internalID: -5921309647391127078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

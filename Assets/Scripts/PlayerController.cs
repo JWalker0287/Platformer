@@ -45,11 +45,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        sword.SetActive(false);
-    }
-
     void OnEnable ()
     {
         if (player != this) return;
@@ -107,7 +102,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
         {
         
-            StartCoroutine("SwingSword");
+            sDurability.UsedSword();
+            anim.SetTrigger("sword");
             
         }
 
@@ -115,19 +111,6 @@ public class PlayerController : MonoBehaviour
         // Debug.Log(sDurability.durability);
 
         anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
-
-    }
-
-    IEnumerator SwingSword()
-    {
-
-        sword.SetActive(true);
-
-        sDurability.UsedSword();
-
-        yield return new WaitForSeconds(0.5f);
-
-        sword.SetActive(false);
 
     }
 

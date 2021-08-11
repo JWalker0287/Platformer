@@ -13,12 +13,12 @@ TagManager:
   - UI
   - Player
   - Enemies
-  - PlayerBullet
-  - EnemyBullet
+  - PlayerDamage
+  - EnemyDamage
   - Environment
   - Light
-  - Sword
   - Interactable
+  - 
   - 
   - 
   - 
