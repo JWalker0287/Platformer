@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LightRestoration : MonoBehaviour
 {
+    [Tooltip("units per second")] public float restorationRate = 0.1f;
     bool inLight = false;
 
     MagicController magic;
@@ -23,7 +24,7 @@ public class LightRestoration : MonoBehaviour
     {
         if (inLight == true && magic != null && magic.mana != magic.maxMana)
         {
-            magic.mana += 0.1f;
+            magic.mana += restorationRate * Time.deltaTime;
         }
     }
 

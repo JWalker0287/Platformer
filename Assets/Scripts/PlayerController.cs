@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Paraphernalia.Components;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,6 +21,7 @@ public class PlayerController : MonoBehaviour
     MagicController magic;
     SwordController sDurability;
     HealthController health;
+    Animator anim;
 
     public Vector3 defaultPosition;
     
@@ -37,16 +37,12 @@ public class PlayerController : MonoBehaviour
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
             sDurability = GetComponent<SwordController>();
+            anim = GetComponent<Animator>();
         }
         else 
         {
             Destroy(gameObject);
         }
-    }
-
-    void Start()
-    {
-        sword.SetActive(false);
     }
 
     void OnEnable ()
@@ -90,7 +86,6 @@ public class PlayerController : MonoBehaviour
 
         if (onGround && Input.GetButtonDown("Jump"))
         {
-            AudioManager.PlayVariedEffect("Jump");
             float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
             body.velocity = new Vector2(body.velocity.x, jumpVelocity);
         }
@@ -99,6 +94,7 @@ public class PlayerController : MonoBehaviour
         {
         
             fireball.Shoot(fireball.transform.right);
+
             magic.UsedMagic();
             
         }
@@ -106,22 +102,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
         {
         
-            StartCoroutine("SwingSword");
+            sDurability.UsedSword();
+            anim.SetTrigger("sword");
             
         }
 
         //Debug.Log(magic.mana);
         // Debug.Log(sDurability.durability);
 
-    }
+        anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
 
-    IEnumerator SwingSword()
-    {
-        sword.SetActive(true);
-        sDurability.UsedSword();
-        AudioManager.PlayVariedEffect("SwordWoosh");
-        yield return new WaitForSeconds(0.5f);
-        sword.SetActive(false);
     }
 
     void GroundCheck ()
