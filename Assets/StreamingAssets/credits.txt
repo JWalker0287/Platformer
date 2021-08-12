@@ -1,4 +1,4 @@
-<b>Nolan Baker</b>
+Nolan Baker
 
 Jonathan Walker
 
@@ -8,9 +8,11 @@ Zack Lowe
 
 Ryan Ansus
 
-Heart Icons by ChickenTeddy
 
-Points Font by Uni 05_53
+Playfair Font - Claus Eggers Sørensen (es@forthehearts.net)
 
-Stand-in sword icon by Ian Peter
 
+Not in Scenes, but still in project:
+    Heart Icons by ChickenTeddy
+    Points Font by Uni 05_53
+    Stand-in sword icon by Ian Peter

@@ -68,6 +68,9 @@ TextureImporter:
   - first:
       213: -486736210339967043
     second: skeleton_leg_lower_left
+  - first:
+      213: -4873241788855701574
+    second: fuzzy_circle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -8000,6 +8003,27 @@ TextureImporter:
       bones: []
       spriteID: a38e800bcf4d95a20800000000000000
       internalID: 3051704404270442554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuzzy_circle
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 852
+        width: 138
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfaaae9964ce5cb0800000000000000
+      internalID: -4873241788855701574
       vertices: []
       indices: 
       edges: []

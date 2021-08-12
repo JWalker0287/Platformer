@@ -1,43 +1,31 @@
 fileFormatVersion: 2
-guid: 7ca378156311f2e43a3c459e85ed79e8
+guid: 3e774283c3bbc464397143d375c9505c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2217638906192892890
-    second: upperLeftBlock
+      213: 3479622175375780301
+    second: MagicMeterOverlay
   - first:
-      213: -731162151908756296
-    second: upperBlock
+      213: 2021689890059234333
+    second: FullHeart
   - first:
-      213: 5113495189850202467
-    second: upperRightBlock
+      213: -6761195647812812105
+    second: EmptyHeart
   - first:
-      213: -7109281448097604524
-    second: leftBlock
+      213: -6269696765017691556
+    second: MagicMeterFill
   - first:
-      213: 7451409459291756537
-    second: middleBlock
+      213: -8668390432781347103
+    second: Sword
   - first:
-      213: 4256288277297392353
-    second: rightBlock
+      213: -2798019304491590635
+    second: SwordBreakOverlay
   - first:
-      213: -7855626261214365963
-    second: lowerLeftBlock
+      213: -4634536716981732061
+    second: SwordBreakMask
   - first:
-      213: -2880035774045676689
-    second: lowerBlock
-  - first:
-      213: 2587766382346407471
-    second: lowerRightBlock
-  - first:
-      213: 3931977970752108024
-    second: blocks
-  - first:
-      213: -4524017988662937840
-    second: upperRightSliced
-  - first:
-      213: -75911164829219746
-    second: walkWay
+      213: -2092279825217605370
+    second: MagicMeterMask
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -79,11 +67,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
-  spriteBorder: {x: 64, y: 64, z: 64, w: 64}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -139,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: upperLeftBlock
+      name: MagicMeterOverlay
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
+        x: 13
+        y: 375
+        width: 106
+        height: 108
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62c69441a2d5931e0800000000000000
-      internalID: -2217638906192892890
+      spriteID: dc968d3cee91a4030800000000000000
+      internalID: 3479622175375780301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upperBlock
+      name: FullHeart
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
+        x: 127
+        y: 439
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b4b44e85e36ad5f0800000000000000
-      internalID: -731162151908756296
+      spriteID: d1caafe5e3c7e0c10800000000000000
+      internalID: 2021689890059234333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upperRightBlock
+      name: EmptyHeart
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
+        x: 171
+        y: 439
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361a0bf58c8c6f640800000000000000
-      internalID: 5113495189850202467
+      spriteID: 7b2433371686b22a0800000000000000
+      internalID: -6761195647812812105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leftBlock
+      name: MagicMeterFill
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
+        x: 302
+        y: 331
+        width: 179
+        height: 149
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45c1ed58032c65d90800000000000000
-      internalID: -7109281448097604524
+      spriteID: c5a64bfa2009df8a0800000000000000
+      internalID: -6269696765017691556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: middleBlock
+      name: Sword
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 12
+        y: 315
+        width: 240
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f712198c69b86760800000000000000
-      internalID: 7451409459291756537
+      spriteID: 1e65ca714d0b3b780800000000000000
+      internalID: -8668390432781347103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightBlock
+      name: SwordBreakOverlay
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 245
+        y: 139
+        width: 25
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ea68fd23af511b30800000000000000
-      internalID: 4256288277297392353
+      spriteID: 51cd71164407b29d0800000000000000
+      internalID: -2798019304491590635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lowerLeftBlock
+      name: SwordBreakMask
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 283
+        y: 145
+        width: 197
+        height: 167
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,113 +267,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f6761c49853bf290800000000000000
-      internalID: -7855626261214365963
+      spriteID: 32d7cc52961deafb0800000000000000
+      internalID: -4634536716981732061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lowerBlock
+      name: MagicMeterMask
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 55
+        y: 174
+        width: 102
+        height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6b179bf8be0808d0800000000000000
-      internalID: -2880035774045676689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lowerRightBlock
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2e847d60d799e320800000000000000
-      internalID: 2587766382346407471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blocks
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 64, y: 64, z: 64, w: 64}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f53753c121319630800000000000000
-      internalID: 3931977970752108024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: upperRightSliced
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 36, w: 64}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 017b44ccb957731c0800000000000000
-      internalID: -4524017988662937840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walkWay
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 169
-        width: 192
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 64, y: 0, z: 64, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e544ed1a23f42fef0800000000000000
-      internalID: -75911164829219746
+      spriteID: 6013037959ab6f2e0800000000000000
+      internalID: -2092279825217605370
       vertices: []
       indices: 
       edges: []
@@ -393,7 +297,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ff97c71467bc00e4dafd59995ec8c11d
     internalID: 0
     vertices: []
     indices: 
