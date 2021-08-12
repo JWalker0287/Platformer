@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 8008242503035907672}
   - component: {fileID: 89016407914573254}
   - component: {fileID: 8906892285018696323}
+  - component: {fileID: 833057337178073757}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -105,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f231687b2d61d16478124a1a31cc6cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  jumpHeight: 3
+  speed: 5
+  jumpHeight: 2
   envLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -195,6 +196,37 @@ MonoBehaviour:
   spawnInvincible: 0
   restoreOnEnable: 0
   _maxDurability: 15
+--- !u!114 &833057337178073757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770321697876695265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31839d8b31cce4d798caa4e0d9e650d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreTags: []
+  damageSoundName: 
+  deathSoundName: 
+  resurectionSoundName: 
+  destructionSoundName: 
+  damageParticlesName: 
+  deathParticlesName: 
+  destructionParticlesName: 
+  destructionSpawnName: 
+  anim: {fileID: 0}
+  damageTriggerName: 
+  deathTriggerName: 
+  resurectionTriggerName: 
+  audioSpatialBlend: 0
+  recoveryTime: 3
+  spawnInvincible: 0
+  healOnEnable: 0
+  _maxHealth: 10
+  destructionHealth: 0
 --- !u!1 &1928822611362662104
 GameObject:
   m_ObjectHideFlags: 0

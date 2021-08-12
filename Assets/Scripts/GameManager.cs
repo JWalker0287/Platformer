@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
 {
     public Image transitionImage;
     public static GameManager game;
+
+    public HealthController health;
+
+    
+
     void Awake ()
     {
         if (game == null) 
@@ -21,6 +26,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+
+
     public static void OpenDoor(int doorID, string scene)
     {
         game.StartCoroutine(game.OpenDoorCoroutine(doorID, scene));
