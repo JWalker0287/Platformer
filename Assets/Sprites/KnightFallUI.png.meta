@@ -26,6 +26,12 @@ TextureImporter:
   - first:
       213: -2092279825217605370
     second: MagicMeterMask
+  - first:
+      213: 5901116053141101008
+    second: BrokenSwordA
+  - first:
+      213: 6190347678287559644
+    second: BrokenSwordB
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -282,7 +288,7 @@ TextureImporter:
         width: 102
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -290,6 +296,48 @@ TextureImporter:
       bones: []
       spriteID: 6013037959ab6f2e0800000000000000
       internalID: -2092279825217605370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenSwordA
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 375
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d994dde8c9f4e150800000000000000
+      internalID: 5901116053141101008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenSwordB
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 375
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb7e706a6888e550800000000000000
+      internalID: 6190347678287559644
       vertices: []
       indices: 
       edges: []
