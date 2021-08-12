@@ -38408,13 +38408,13 @@ BoxCollider2D:
     border: {x: 1, y: 1, z: 1, w: 1}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 3}
-    newSize: {x: 16, y: 7.0185947}
+    newSize: {x: 16, y: 7}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 7.0185947}
+  m_Size: {x: 16, y: 7}
   m_EdgeRadius: 0
 --- !u!212 &1679563880
 SpriteRenderer:
@@ -38461,7 +38461,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 16, y: 7.0185947}
+  m_Size: {x: 16, y: 7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -50198,6 +50198,18 @@ PrefabInstance:
       propertyPath: emptyX
       value: 108
       objectReference: {fileID: 0}
+    - target: {fileID: 3183281175693474646, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
+      propertyPath: tipSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183281175693474646, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
+      propertyPath: tipSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -2798019304491590635, guid: 3e774283c3bbc464397143d375c9505c, type: 3}
+    - target: {fileID: 3183281175693474646, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
+      propertyPath: tipSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -4634536716981732061, guid: 3e774283c3bbc464397143d375c9505c, type: 3}
     - target: {fileID: 3225434294310964085, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -50352,7 +50364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6388430066079893578, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: m_FillAmount
-      value: 0.64
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 6985177931470226266, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: m_AnchorMax.y
