@@ -5,29 +5,35 @@ using UnityEngine.UI;
 
 public class DurabilityBar : MonoBehaviour
 {
-   public float speed = 10;
-    public SwordController sword;
+    [Range(0,1)] public float minFill = 0.3f;
+    public float fullX = 300;
+    public float emptyX = 111;
     public Image bar;
+    public Image tip;
+    public Sprite[] tipSprites;
+    SwordController sword;
 
-    void Awake()
+    void Start ()
     {
-
-        bar = GetComponent<Image>();
-
+        sword = PlayerController.player.GetComponent<SwordController>();
+        sword.onDurabilityChanged += PlayerDurabilityChanged;
     }
 
-    void Update()
+    void PlayerDurabilityChanged(float durability, float prevDurability, float maxDurability)
     {
-
-        if (sword == null)
+        float d = durability / maxDurability;
+        bar.fillAmount = d * (1-minFill) + minFill;
+        if (d < 0.95f)
         {
-
-            sword = PlayerController.player.GetComponent<SwordController>();
-
+            tip.enabled = true;
+            tip.sprite = tipSprites[Random.Range(0, tipSprites.Length)];
+            RectTransform t = tip.GetComponent<RectTransform>();
+            float x = Mathf.Lerp(emptyX, fullX, d);
+            t.anchoredPosition = new Vector2(x, 0);
         }
-        
-
-        bar.fillAmount = Mathf.Lerp(bar.fillAmount, sword.durabilityPct, Time.deltaTime * speed);
-    
+        else
+        {
+            tip.enabled = false;
+        }
     }
 }
