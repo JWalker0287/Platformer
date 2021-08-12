@@ -4,50 +4,63 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController player;
+    
+    public GameObject sword;
+
     public float speed = 2;
     public float jumpHeight = 3;
     public LayerMask envLayer;
     public LayerMask interactLayer;
 
     bool inLight;
-
     bool onGround;
 
     Rigidbody2D body;
-
     ProjectileLauncher fireball;
+    MagicController magic;
+    SwordController sDurability;
+    HealthController health;
+    Animator anim;
 
-    public GameObject sword;
-
-    public MagicController magic;
-
-    public SwordController sDurability;
-
-    public static PlayerController player;
+    public Vector3 defaultPosition;
+    
     void Awake ()
     {
+        defaultPosition = transform.position;
         if (player == null) 
         {
             player = this;
             DontDestroyOnLoad(gameObject);
+            health = GetComponent<HealthController>();
+            body = GetComponent<Rigidbody2D>();
+            fireball = GetComponentInChildren<ProjectileLauncher>();
+            magic = GetComponent<MagicController>();
+            sDurability = GetComponent<SwordController>();
+            anim = GetComponent<Animator>();
         }
         else 
         {
             Destroy(gameObject);
         }
     }
-    void Start()
+
+    void OnEnable ()
     {
-        
-        body = GetComponent<Rigidbody2D>();
-        fireball = GetComponentInChildren<ProjectileLauncher>();
-        magic = GetComponent<MagicController>();
-        sDurability = GetComponent<SwordController>();
+        if (player != this) return;
+        health.onDeath += GameManager.GameOver;
+    }   
 
-        player = this;
+    void OnDisable ()
+    {
+        if (player != this) return;
+        health.onDeath -= GameManager.GameOver;
+    }
 
-        sword.SetActive(false);
-
+    public static void Revive ()
+    {
+        player.health.health = player.health.maxHealth;
+        player.gameObject.SetActive(true);
     }
 
     void InteractCheck ()
@@ -89,25 +102,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
         {
         
-            StartCoroutine("SwingSword");
+            sDurability.UsedSword();
+            anim.SetTrigger("sword");
             
         }
 
         //Debug.Log(magic.mana);
         // Debug.Log(sDurability.durability);
 
-    }
-
-    IEnumerator SwingSword()
-    {
-
-        sword.SetActive(true);
-
-        sDurability.UsedSword();
-
-        yield return new WaitForSeconds(0.5f);
-
-        sword.SetActive(false);
+        anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
 
     }
 

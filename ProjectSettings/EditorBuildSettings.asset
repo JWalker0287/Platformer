@@ -4,6 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Demos/DemoLevel.unity
@@ -11,4 +12,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Demos/ZachScene.unity
     guid: 164936f80b5f72444b5b3758d3d6bd67
+=======
+  m_Scenes: []
+>>>>>>> master
   m_configObjects: {}
