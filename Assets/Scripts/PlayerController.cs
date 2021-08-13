@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Paraphernalia.Components;
 
 public class PlayerController : MonoBehaviour
 {
@@ -88,6 +89,7 @@ public class PlayerController : MonoBehaviour
         {
             float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
             body.velocity = new Vector2(body.velocity.x, jumpVelocity);
+            AudioManager.PlayVariedEffect("Jump");
         }
 
         if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
@@ -104,7 +106,7 @@ public class PlayerController : MonoBehaviour
         
             sDurability.UsedSword();
             anim.SetTrigger("sword");
-            
+            AudioManager.PlayVariedEffect("SwordWoosh");
         }
 
         //Debug.Log(magic.mana);

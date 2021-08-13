@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreTags: []
-  damageSoundName: 
+  damageSoundName: TakeDamage
   deathSoundName: 
   resurectionSoundName: 
   destructionSoundName: 
