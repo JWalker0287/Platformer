@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour
 
         if (onGround && Input.GetButtonDown("Jump"))
         {
+            anim.SetTrigger("jump");
             float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
             body.velocity = new Vector2(body.velocity.x, jumpVelocity);
             AudioManager.PlayVariedEffect("Jump");
@@ -113,6 +114,8 @@ public class PlayerController : MonoBehaviour
         // Debug.Log(sDurability.durability);
 
         anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
+        anim.SetFloat("yVelocity", body.velocity.y);
+        anim.SetBool("onGround", onGround);
 
     }
 
