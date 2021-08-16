@@ -8,20 +8,12 @@ using Paraphernalia.Components;
 public class GameManager : MonoBehaviour
 {
     public static GameManager game;
-<<<<<<< HEAD
-
-    public HealthController health;
-
-    
-
-=======
     
     public Image transitionImage;
     public GameOverScreen gameOverScreen;
     
     int points = 0;
     
->>>>>>> master
     void Awake ()
     {
         if (game == null) 
@@ -37,10 +29,6 @@ public class GameManager : MonoBehaviour
     }
 
 
-<<<<<<< HEAD
-
-
-=======
     public static void GameOver()
     {
         game.gameOverScreen.Setup(game.points);
@@ -53,7 +41,6 @@ public class GameManager : MonoBehaviour
          game.StartCoroutine(game.ReloadSceneCoroutine());
     }
 
->>>>>>> master
     public static void OpenDoor(int doorID, string scene)
     {
         game.StartCoroutine(game.OpenDoorCoroutine(doorID, scene));

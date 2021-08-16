@@ -21,7 +21,7 @@ public class BossRoomMoonLightChange : MonoBehaviour
     //     while (enabled)
     //     {
 
-            yield return null;
+            //yield return null;
 
 
     //     }

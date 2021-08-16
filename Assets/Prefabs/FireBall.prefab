@@ -13,14 +13,9 @@ GameObject:
   - component: {fileID: -8966575716407453755}
   - component: {fileID: -6790649533849179985}
   - component: {fileID: 3336806425186496901}
-<<<<<<< HEAD:Assets/Prefabs/Flame.prefab
-  m_Layer: 0
-  m_Name: Flame
-=======
   - component: {fileID: -9051725738284170818}
   m_Layer: 8
   m_Name: FireBall
->>>>>>> master:Assets/Prefabs/FireBall.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -103,13 +103,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7848512773344832858}
   - component: {fileID: 1086006000795540600}
-<<<<<<< HEAD
-  m_Layer: 0
-=======
   - component: {fileID: 3244712169980539869}
   - component: {fileID: 6819201538446168023}
   m_Layer: 11
->>>>>>> master
   m_Name: MoonLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,15 +121,10 @@ Transform:
   m_GameObject: {fileID: 772200399691492699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0184, y: 6.8213, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 0.4340952, y: 1.9075304, z: 1}
-  m_Children: []
-=======
   m_LocalScale: {x: 0.490928, y: 1.7962759, z: 1}
   m_Children:
   - {fileID: 1771748058}
   - {fileID: 5801751377075597529}
->>>>>>> master
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -178,11 +169,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: aa73cd5429109894fa9abf5b5b9513a1, type: 3}
-<<<<<<< HEAD
-  m_Color: {r: 1, g: 1, b: 1, a: 0.40392157}
-=======
   m_Color: {r: 0.72365606, g: 0.82510304, b: 0.8867924, a: 0.53333336}
->>>>>>> master
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -192,8 +179,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
-=======
 --- !u!114 &3244712169980539869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,4 +316,3 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> master
