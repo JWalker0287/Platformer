@@ -39942,7 +39942,7 @@ GameObject:
   - component: {fileID: 1902723693}
   - component: {fileID: 1902723692}
   m_Layer: 5
-  m_Name: BackGRound
+  m_Name: GameOverScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
