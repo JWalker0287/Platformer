@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 8008242503035907672}
   - component: {fileID: 8336995356883005003}
   - component: {fileID: 1712877525413496}
+  - component: {fileID: 7796364626629820869}
   m_Layer: 7
   m_Name: Skeleton
   m_TagString: Untagged
@@ -404,7 +405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnAroundTime: 0
   turnAroundInterval: 3
-  speed: 2
 --- !u!50 &7080946843209856566
 Rigidbody2D:
   serializedVersion: 4
@@ -494,6 +494,23 @@ SortingGroup:
   m_SortingLayerID: 1737570739
   m_SortingLayer: 1
   m_SortingOrder: 0
+--- !u!114 &7796364626629820869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770321697876695265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f075adb84d19f439fa8d3b11ca23b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  jumpHeight: 3
+  envLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &1776675216484522923
 GameObject:
   m_ObjectHideFlags: 0
