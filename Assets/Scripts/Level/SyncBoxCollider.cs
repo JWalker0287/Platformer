@@ -9,6 +9,8 @@ public class SyncBoxCollider : MonoBehaviour
 {
 
 #if UNITY_EDITOR
+    public float inset = 0.1f;
+
     void Update()
     {
         if (Application.isPlaying) return;
@@ -16,9 +18,10 @@ public class SyncBoxCollider : MonoBehaviour
         BoxCollider2D box = GetComponent<BoxCollider2D>();
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 
-        if (box.size != sprite.size) 
+        Vector2 targetSize = sprite.size - Vector2.one * inset;
+        if (box.size != targetSize) 
         {
-            box.size = sprite.size;
+            box.size = targetSize;
         }
     }
 #endif

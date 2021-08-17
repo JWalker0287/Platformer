@@ -1,23 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Paraphernalia.Components;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController player;
     
-    public GameObject sword;
-
-    public float speed = 2;
-    public float jumpHeight = 3;
-    public LayerMask envLayer;
     public LayerMask interactLayer;
 
     bool inLight;
-    bool onGround;
 
-    Rigidbody2D body;
+    CharacterMotor motor;
     ProjectileLauncher fireball;
     MagicController magic;
     SwordController sDurability;
@@ -34,7 +27,7 @@ public class PlayerController : MonoBehaviour
             player = this;
             DontDestroyOnLoad(gameObject);
             health = GetComponent<HealthController>();
-            body = GetComponent<Rigidbody2D>();
+            motor = GetComponent<CharacterMotor>();
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
             sDurability = GetComponent<SwordController>();
@@ -79,49 +72,21 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         InteractCheck();
-        GroundCheck();
         float x = Input.GetAxis("Horizontal");
-        if (x != 0) transform.right = Vector2.right * x;
-
-        body.velocity = new Vector2(x * speed, body.velocity.y);
-
-        if (onGround && Input.GetButtonDown("Jump"))
-        {
-            anim.SetTrigger("jump");
-            float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
-            body.velocity = new Vector2(body.velocity.x, jumpVelocity);
-            AudioManager.PlayVariedEffect("Jump");
-        }
+        motor.Move(x);
+        if (Input.GetButtonDown("Jump")) motor.Jump();
 
         if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
         {
-        
             fireball.Shoot(fireball.transform.right);
-
             magic.UsedMagic();
-            
+            anim.SetTrigger("magic");
         }
         
         if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
         {
-        
             sDurability.UsedSword();
             anim.SetTrigger("sword");
-            AudioManager.PlayVariedEffect("SwordWoosh");
         }
-
-        //Debug.Log(magic.mana);
-        // Debug.Log(sDurability.durability);
-
-        anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
-        anim.SetFloat("yVelocity", body.velocity.y);
-        anim.SetBool("onGround", onGround);
-
-    }
-
-    void GroundCheck ()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.05f, envLayer);
-        onGround = (colliders.Length > 0);
     }
 }
