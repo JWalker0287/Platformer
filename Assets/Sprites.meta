@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 7e23794f9226b184d85321a8e4339b60
+=======
+guid: 07c5aa5213a1ea54d93e77135f78bd71
+>>>>>>> jwalker
+=======
 guid: 194d55717cfad2148b12608e46f544b9
+>>>>>>> rcrutchfield
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
