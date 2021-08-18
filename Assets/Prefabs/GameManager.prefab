@@ -306,6 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particlePrefabs:
   - {fileID: 1437946671110696395, guid: 67726251d8a721b4ebe411ad1395affb, type: 3}
+  - {fileID: 4737378293140177201, guid: c8bf0b3c35fb65f47b72c3308f2eaee4, type: 3}
   poolSize: 15
 --- !u!1 &8586222812127142033
 GameObject:
@@ -468,69 +469,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player UI
       objectReference: {fileID: 0}
-    - target: {fileID: 3175217121658785022, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3175217121658785022, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3175217121658785022, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5458149
-      objectReference: {fileID: 0}
-    - target: {fileID: 3175217121658785022, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5458149
-      objectReference: {fileID: 0}
-    - target: {fileID: 3175217121658785022, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 3175217121658785022, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000013828278
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595314719521786703, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: fullX
-      value: 305
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595314719521786703, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: emptyX
-      value: 108
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595314719521786703, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: tipSprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595314719521786703, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: tipSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: -2798019304491590635, guid: 3e774283c3bbc464397143d375c9505c, type: 3}
-    - target: {fileID: 4595314719521786703, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: tipSprites.Array.data[3]
-      value: 
-      objectReference: {fileID: -4634536716981732061, guid: 3e774283c3bbc464397143d375c9505c, type: 3}
-    - target: {fileID: 5422576337166792787, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_FillAmount
-      value: 0.34
-      objectReference: {fileID: 0}
     - target: {fileID: 6033048509882078586, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010916709652962804, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010916709652962804, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.55493724
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010916709652962804, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -164.95758
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 781d7feea06974e449cf6e864f1e9589, type: 3}
