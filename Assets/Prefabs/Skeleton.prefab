@@ -465,8 +465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreTags: []
-  damageSoundName: 
-  deathSoundName: 
+  damageSoundName: SkeletonTakeDamage
+  deathSoundName: SkeletonDeath
   resurectionSoundName: 
   destructionSoundName: 
   damageParticlesName: 

@@ -260,7 +260,20 @@ MonoBehaviour:
   autoStartMusic: 1
   dontDestroyOnLoad: 1
   clips:
-  - {fileID: 8300000, guid: f44017de7fa16394b86fc48421da050b, type: 3}
+  - {fileID: 8300000, guid: 8ca2ca0ee76239a41ae8cb54d940022a, type: 3}
+  - {fileID: 8300000, guid: a208e7c2b8cf09543b6f12bc3ab87cab, type: 3}
+  - {fileID: 8300000, guid: 89cd6bb609265d54698df23071411484, type: 3}
+  - {fileID: 8300000, guid: 8d48c9358e0d7914cb9486146db8fdb2, type: 3}
+  - {fileID: 8300000, guid: 2008bf49e9e349d48af355d1fa8d3277, type: 3}
+  - {fileID: 8300000, guid: 5b7f4705390f67a49a1e4ff4e6dd9c64, type: 3}
+  - {fileID: 8300000, guid: be01f4d950f1367498a09dfacf5780f2, type: 3}
+  - {fileID: 8300000, guid: e241f1baf1376e049b3ef4b40a97adf8, type: 3}
+  - {fileID: 8300000, guid: 3356e857bba9c6c479c7963c0a75d9d0, type: 3}
+  - {fileID: 8300000, guid: 7c70068fdf0f16849b76ef8a6f26b74a, type: 3}
+  - {fileID: 8300000, guid: d52eac8601f948943891db5a7e436166, type: 3}
+  - {fileID: 8300000, guid: 2de2de888f8d5a74195fac0e34971206, type: 3}
+  - {fileID: 8300000, guid: d69fce504be4a8749a18d3fb77ad2ddb, type: 3}
+  - {fileID: 8300000, guid: d2264c193e4827b45b63d6e38369a72d, type: 3}
   mixer: {fileID: 0}
   mixerGroupPaths: []
   musicGroupPath: Master/Music
