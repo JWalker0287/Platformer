@@ -1,16 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Paraphernalia.Components;
 
 public class CharacterMotor : MonoBehaviour
 {
     public float speed = 2;
     public float jumpHeight = 3;
     public LayerMask envLayer;
-    bool onGround;
+    bool _onGround;
+    public bool onGround {
+        get { return _onGround; }
+        private set { _onGround = value; }
+    }
+
     Rigidbody2D body;
     Animator anim;
     float xInput = 0;
+    public string jumpPuffParticles = "JumpPuff";
+    public string jumpSmearParticles = "Smear";
 
     void Awake ()
     {
@@ -28,8 +36,10 @@ public class CharacterMotor : MonoBehaviour
         if (onGround)
         {
             anim.SetTrigger("jump");
+            ParticleManager.Play(jumpPuffParticles, transform.position);
             float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
             body.velocity = new Vector2(body.velocity.x, jumpVelocity);
+            ParticleManager.Play(jumpSmearParticles, transform.position, body.velocity);
         }
     }
     

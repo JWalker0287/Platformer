@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     public static PlayerController player;
     
     public LayerMask interactLayer;
+    public ParticleSystem dustTrailParticles;
 
     bool inLight;
 
     CharacterMotor motor;
+    Rigidbody2D body;
     ProjectileLauncher fireball;
     MagicController magic;
     SwordController sDurability;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             health = GetComponent<HealthController>();
             motor = GetComponent<CharacterMotor>();
+            body = GetComponent<Rigidbody2D>();
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
             sDurability = GetComponent<SwordController>();
@@ -88,5 +91,11 @@ public class PlayerController : MonoBehaviour
             sDurability.UsedSword();
             anim.SetTrigger("sword");
         }
+
+        if ((motor.onGround && Mathf.Abs(body.velocity.x) > 2) || body.velocity.y > 0.5f)
+        {
+            if (dustTrailParticles.isStopped) dustTrailParticles.Play();
+        }
+        else if (dustTrailParticles.isPlaying) dustTrailParticles.Stop();
     }
 }
