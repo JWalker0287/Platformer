@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Paraphernalia.Components;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController player;
     
     public LayerMask interactLayer;
+    public ParticleSystem dustTrailParticles;
 
     bool inLight;
 
     CharacterMotor motor;
+    Rigidbody2D body;
     ProjectileLauncher fireball;
     MagicController magic;
     SwordController sDurability;
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             health = GetComponent<HealthController>();
             motor = GetComponent<CharacterMotor>();
+            body = GetComponent<Rigidbody2D>();
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
             sDurability = GetComponent<SwordController>();
@@ -75,6 +79,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         motor.Move(x);
         if (Input.GetButtonDown("Jump")) motor.Jump();
+        else if (Input.GetButtonUp("Jump")) motor.CancelJump();
 
         if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
         {
@@ -88,5 +93,25 @@ public class PlayerController : MonoBehaviour
             sDurability.UsedSword();
             anim.SetTrigger("sword");
         }
+
+        ParticleSystem.EmissionModule emission = dustTrailParticles.emission;
+        emission.enabled = ( motor.onGround && Mathf.Abs(body.velocity.x) > 2) || 
+                           (!motor.onGround && body.velocity.y > 1);
+    }
+
+    public void PlaySound (string sfx)
+    {
+        AudioManager.PlayVariedEffect(sfx);
+    }
+
+    void OnCollisionEnter2D (Collision2D c)
+    {
+        float dot = Vector2.Dot(Vector2.up, c.relativeVelocity);
+        if (dot < 0.707f) return;
+
+        float volume = Mathf.Clamp01(dot / 20);
+        volume *= volume;
+        float pitch = Mathf.Lerp(0.9f, 1.1f, volume);
+        AudioManager.PlayEffect("Land", transform, volume, pitch);
     }
 }
