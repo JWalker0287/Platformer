@@ -43,7 +43,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387093554748832546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -104,6 +104,7 @@ MonoBehaviour:
   lifetime: 3
   size: 1
   orientToVelocity: 1
+  naturalOrientation: 0
   dieOffScreen: 0
   dieOnHit: 1
   limitDistance: 0
@@ -112,8 +113,8 @@ MonoBehaviour:
   gunVelocityDamping: 0.1
   particles: {fileID: 3533927260247802828}
   audioMixerName: 
-  onFireAudioClipName: 
-  onHitAudioClipName: 
+  onFireAudioClipName: LaunchFireBall
+  onHitAudioClipName: FireBallHit
   audioSpatialBlend: 0
   screenSpacePan: 0
   scaleImpactVolume: 0
@@ -144,7 +145,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3336806425186496901
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -207,19 +208,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741302678074080294, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 741302678074080294, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741302678074080294, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741302678074080294, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741302678074080294, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -227,11 +228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741302678074080294, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741302678074080294, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7189693471005054676, guid: a1a1b5b818c69004f8a4acbc456633dc, type: 3}
       propertyPath: m_Name

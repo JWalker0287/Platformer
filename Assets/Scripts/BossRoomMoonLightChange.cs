@@ -15,18 +15,18 @@ public class BossRoomMoonLightChange : MonoBehaviour
 
     }
 
-    // IEnumerator BackAndForth()
-    // {
+    IEnumerator BackAndForth()
+    {
 
-    //     while (enabled)
-    //     {
+        while (enabled)
+        {
 
-            //yield return null;
-
-
-    //     }
+            yield return null;
 
 
-    // }
+        }
+
+
+    }
 
 }

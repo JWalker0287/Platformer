@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    Rigidbody2D body;
-    Animator anim;
     public float turnAroundTime = 0;
     public float turnAroundInterval = 3;
-    public float speed = 2;
     Vector2 leftRight;
     bool goingRight;
+
+    Animator anim;
+    CharacterMotor motor;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
-        body = GetComponent<Rigidbody2D>();
+        motor = GetComponent<CharacterMotor>();
         leftRight = Vector2.right;
         goingRight = true;
     }
@@ -40,26 +40,15 @@ public class EnemyController : MonoBehaviour
         {
             UpdateWander();
         }
-        body.velocity = new Vector2(speed * leftRight.x, body.velocity.y);
-        if (anim) anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
+        motor.Move(leftRight.x);
 
     }
     void UpdateWander()
     {
         if (turnAroundTime > turnAroundInterval)
         {
-            if(goingRight)
-            {
-                leftRight = Vector2.left;
-                transform.right = Vector2.left;
-                goingRight = false;
-            }
-            else
-            {
-                leftRight = Vector2.right;
-                transform.right = Vector2.right;
-                goingRight = true;
-            }
+            goingRight = !goingRight;
+            leftRight = goingRight ? Vector2.right : Vector2.left;
             turnAroundTime = 0;
         }
         turnAroundTime += Time.deltaTime;

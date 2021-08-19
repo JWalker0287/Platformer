@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Music/177958__sclolex__water-dripping-in-cave.wav.meta
 guid: e8a0ef54b5a7b49418fd6f0cdacb3b8c
+=======
+guid: 7b9877be68f64a046b6b3936fc6b24a8
+>>>>>>> master:Assets/Audio/Music/Knightfall level 1.mp3.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

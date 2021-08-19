@@ -29,7 +29,7 @@ public class DurabilityBar : MonoBehaviour
             tip.sprite = tipSprites[Random.Range(0, tipSprites.Length)];
             RectTransform t = tip.GetComponent<RectTransform>();
             float x = Mathf.Lerp(emptyX, fullX, d);
-            t.anchoredPosition = new Vector2(x, -4.2f);
+            t.anchoredPosition = new Vector2(x, 0);
         }
         else
         {

@@ -7,18 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController player;
     
-    public GameObject sword;
-
-    public GameObject gameManager;
-
-    public float speed = 2;
-    public float jumpHeight = 3;
-    public LayerMask envLayer;
     public LayerMask interactLayer;
+    public ParticleSystem dustTrailParticles;
 
     bool inLight;
-    bool onGround;
 
+    CharacterMotor motor;
     Rigidbody2D body;
     ProjectileLauncher fireball;
     MagicController magic;
@@ -36,6 +30,7 @@ public class PlayerController : MonoBehaviour
             player = this;
             DontDestroyOnLoad(gameObject);
             health = GetComponent<HealthController>();
+            motor = GetComponent<CharacterMotor>();
             body = GetComponent<Rigidbody2D>();
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
@@ -81,48 +76,42 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         InteractCheck();
-        GroundCheck();
         float x = Input.GetAxis("Horizontal");
-        if (x != 0) transform.right = Vector2.right * x;
-
-        body.velocity = new Vector2(x * speed, body.velocity.y);
-
-        if (onGround && Input.GetButtonDown("Jump"))
-        {
-            float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
-            body.velocity = new Vector2(body.velocity.x, jumpVelocity);
-            AudioManager.PlayEffect("Jump");
-        }
+        motor.Move(x);
+        if (Input.GetButtonDown("Jump")) motor.Jump();
+        else if (Input.GetButtonUp("Jump")) motor.CancelJump();
 
         if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
         {
-        
             fireball.Shoot(fireball.transform.right);
-
             magic.UsedMagic();
-            
+            anim.SetTrigger("magic");
         }
         
         if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
         {
-        
             sDurability.UsedSword();
             anim.SetTrigger("sword");
-
-            AudioManager.PlayEffect("SwordWoosh");
-            
         }
 
-        //Debug.Log(magic.mana);
-        // Debug.Log(sDurability.durability);
-
-        anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
-
+        ParticleSystem.EmissionModule emission = dustTrailParticles.emission;
+        emission.enabled = ( motor.onGround && Mathf.Abs(body.velocity.x) > 2) || 
+                           (!motor.onGround && body.velocity.y > 1);
     }
 
-    void GroundCheck ()
+    public void PlaySound (string sfx)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.05f, envLayer);
-        onGround = (colliders.Length > 0);
+        AudioManager.PlayVariedEffect(sfx);
+    }
+
+    void OnCollisionEnter2D (Collision2D c)
+    {
+        float dot = Vector2.Dot(Vector2.up, c.relativeVelocity);
+        if (dot < 0.707f) return;
+
+        float volume = Mathf.Clamp01(dot / 20);
+        volume *= volume;
+        float pitch = Mathf.Lerp(0.9f, 1.1f, volume);
+        AudioManager.PlayEffect("Land", transform, volume, pitch);
     }
 }

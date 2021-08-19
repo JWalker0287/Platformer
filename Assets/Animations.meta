@@ -1,17 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/Materials.meta
-guid: 08adaa8ea03f80143953a5e7b77dfdc8
-=======
-guid: 40e48620150577844bd3351304691d13
->>>>>>> master:Assets/Animations.meta
-=======
 <<<<<<< HEAD:Assets/Animations.meta
 guid: 40e48620150577844bd3351304691d13
 =======
 guid: 0b6cffdff5d87fa48b2e1f856a5adad6
 >>>>>>> zach:Assets/Materials.meta
->>>>>>> master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
