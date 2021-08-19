@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         motor.Move(x);
         if (Input.GetButtonDown("Jump")) motor.Jump();
+        else if (Input.GetButtonUp("Jump")) motor.CancelJump();
 
         if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
         {

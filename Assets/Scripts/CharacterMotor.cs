@@ -33,14 +33,21 @@ public class CharacterMotor : MonoBehaviour
 
     public void Jump()
     {
-        if (onGround)
-        {
-            anim.SetTrigger("jump");
-            ParticleManager.Play(jumpPuffParticles, transform.position);
-            float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
-            body.velocity = new Vector2(body.velocity.x, jumpVelocity);
-            ParticleManager.Play(jumpSmearParticles, transform.position, body.velocity);
-        }
+        if (!onGround) return;
+
+        anim.SetTrigger("jump");
+        ParticleManager.Play(jumpPuffParticles, transform.position);
+        float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
+        body.velocity = new Vector2(body.velocity.x, jumpVelocity);
+        ParticleManager.Play(jumpSmearParticles, transform.position, body.velocity);
+    }
+
+    public void CancelJump()
+    {
+        if (onGround) return;
+
+        float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * 0.5f);
+        if (body.velocity.y > jumpVelocity) body.velocity = new Vector2(body.velocity.x, jumpVelocity);
     }
     
     void Update ()
