@@ -463,6 +463,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   jumpPuffParticles: JumpPuff
+  jumpSmearParticles: Smear
 --- !u!1 &1908046676556395152
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +783,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -1340,7 +1341,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.05
+      scalar: -0.005
       minScalar: 0
       maxCurve:
         serializedVersion: 2

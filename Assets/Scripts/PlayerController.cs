@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Paraphernalia.Components;
 
 public class PlayerController : MonoBehaviour
 {
@@ -92,10 +93,24 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("sword");
         }
 
-        if ((motor.onGround && Mathf.Abs(body.velocity.x) > 2) || body.velocity.y > 0.5f)
-        {
-            if (dustTrailParticles.isStopped) dustTrailParticles.Play();
-        }
-        else if (dustTrailParticles.isPlaying) dustTrailParticles.Stop();
+        ParticleSystem.EmissionModule emission = dustTrailParticles.emission;
+        emission.enabled = ( motor.onGround && Mathf.Abs(body.velocity.x) > 2) || 
+                           (!motor.onGround && body.velocity.y > 1);
+    }
+
+    public void PlaySound (string sfx)
+    {
+        AudioManager.PlayVariedEffect(sfx);
+    }
+
+    void OnCollisionEnter2D (Collision2D c)
+    {
+        float dot = Vector2.Dot(Vector2.up, c.relativeVelocity);
+        if (dot < 0.707f) return;
+
+        float volume = Mathf.Clamp01(dot / 20);
+        volume *= volume;
+        float pitch = Mathf.Lerp(0.9f, 1.1f, volume);
+        AudioManager.PlayEffect("Land", transform, volume, pitch);
     }
 }
