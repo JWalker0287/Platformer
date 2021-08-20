@@ -1,49 +1,117 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Paraphernalia.Components;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 2;
-    public float jumpHeight = 3;
-    public LayerMask envLayer;
+    public static PlayerController player;
+    
+    public LayerMask interactLayer;
+    public ParticleSystem dustTrailParticles;
 
     bool inLight;
 
-    bool onGround;
+    CharacterMotor motor;
     Rigidbody2D body;
     ProjectileLauncher fireball;
-    void Start()
-    {
-        body = GetComponent<Rigidbody2D>();
-        fireball = GetComponentInChildren<ProjectileLauncher>();
+    MagicController magic;
+    SwordController sDurability;
+    HealthController health;
+    Animator anim;
 
+    public Vector3 defaultPosition;
+    
+    void Awake ()
+    {
+        defaultPosition = transform.position;
+        if (player == null) 
+        {
+            player = this;
+            DontDestroyOnLoad(gameObject);
+            health = GetComponent<HealthController>();
+            motor = GetComponent<CharacterMotor>();
+            body = GetComponent<Rigidbody2D>();
+            fireball = GetComponentInChildren<ProjectileLauncher>();
+            magic = GetComponent<MagicController>();
+            sDurability = GetComponent<SwordController>();
+            anim = GetComponent<Animator>();
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnEnable ()
+    {
+        if (player != this) return;
+        health.onDeath += GameManager.GameOver;
+    }   
+
+    void OnDisable ()
+    {
+        if (player != this) return;
+        health.onDeath -= GameManager.GameOver;
+    }
+
+    public static void Revive ()
+    {
+        player.health.health = player.health.maxHealth;
+        player.gameObject.SetActive(true);
+    }
+
+    void InteractCheck ()
+    {
+        if (!Input.GetButtonDown("Submit")) return;
+
+        Collider2D c = Physics2D.OverlapCircle(transform.position, 0.5f, interactLayer);
+        if (c != null)
+        {
+            Interactable i = c.GetComponent<Interactable>();
+            if (i.CanInteract()) i.Interact();
+        }
     }
 
     void Update()
     {
-        GroundCheck();
+        InteractCheck();
         float x = Input.GetAxis("Horizontal");
-        if (x != 0) transform.right = Vector2.right * x;
+        motor.Move(x);
+        if (Input.GetButtonDown("Jump")) motor.Jump();
+        else if (Input.GetButtonUp("Jump")) motor.CancelJump();
 
-        body.velocity = new Vector2(x * speed, body.velocity.y);
-
-        if (onGround && Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
         {
-            float jumpVelocity = Mathf.Sqrt(-2 * Physics2D.gravity.y * body.gravityScale * jumpHeight);
-            body.velocity = new Vector2(body.velocity.x, jumpVelocity);
+            fireball.Shoot(fireball.transform.right);
+            magic.UsedMagic();
+            anim.SetTrigger("magic");
+        }
+        
+        if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
+        {
+            sDurability.UsedSword();
+            anim.SetTrigger("sword");
         }
 
-        if (Input.GetButton("Fire1") && fireball.Shoot(fireball.transform.right) > 0)
-        {
-            // do stuff if gun fires
-        }
-
+        ParticleSystem.EmissionModule emission = dustTrailParticles.emission;
+        emission.enabled = ( motor.onGround && Mathf.Abs(body.velocity.x) > 2) || 
+                           (!motor.onGround && body.velocity.y > 1);
     }
 
-    void GroundCheck ()
+    public void PlaySound (string sfx)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.05f, envLayer);
-        onGround = (colliders.Length > 0);
+        AudioManager.PlayVariedEffect(sfx);
+    }
+
+    void OnCollisionEnter2D (Collision2D c)
+    {
+        float dot = Vector2.Dot(Vector2.up, c.relativeVelocity);
+        if (dot < 0.707f) return;
+
+        float volume = Mathf.Clamp01(dot / 20);
+        volume *= volume;
+        float pitch = Mathf.Lerp(0.9f, 1.1f, volume);
+        AudioManager.PlayEffect("Land", transform, volume, pitch);
     }
 }
