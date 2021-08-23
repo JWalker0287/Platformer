@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
     
     public Image transitionImage;
         
-    void Awake ()
+    void Start ()
     {
         if (loader == null) 
         {

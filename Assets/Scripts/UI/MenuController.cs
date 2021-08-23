@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+
+    void Awake ()
+    {
+        Spawner.DisableAll();
+        if (GameManager.game != null) Destroy(GameManager.game.gameObject);
+        if (PlayerController.player != null) Destroy(PlayerController.player.gameObject);
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneLoader.LoadScene(sceneName);

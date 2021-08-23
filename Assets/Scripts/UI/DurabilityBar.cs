@@ -22,6 +22,13 @@ public class DurabilityBar : MonoBehaviour
         UpdateSword(sword.durability / sword.maxDurability);
     }
 
+    void OnDestroy ()
+    {
+        if (inFileSelectScreen) return;
+        sword = PlayerController.player.GetComponent<SwordController>();
+        sword.onDurabilityChanged -= PlayerDurabilityChanged;
+    }
+
     void PlayerDurabilityChanged(float durability, float prevDurability, float maxDurability)
     {
         UpdateSword(durability / maxDurability);

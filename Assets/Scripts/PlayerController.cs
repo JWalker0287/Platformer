@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.paused) return;
+        
         InteractCheck();
         float x = Input.GetAxis("Horizontal");
         motor.Move(x);
