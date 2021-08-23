@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordController : MonoBehaviour
 {
-   public delegate void OnDurabilityChanged(float durability, float prevDurability, float maxDurability);
+    public delegate void OnDurabilityChanged(float durability, float prevDurability, float maxDurability);
     public event OnDurabilityChanged onDurabilityChanged = delegate {};
 
     public delegate void OnAnyDurabilityChanged(SwordController swordController, float durability, float prevDurability, float maxDurability);

@@ -11,24 +11,31 @@ public class DurabilityBar : MonoBehaviour
     public Image bar;
     public Image tip;
     public Sprite[] tipSprites;
+    public bool inFileSelectScreen;
     SwordController sword;
 
     void Start ()
     {
+        if (inFileSelectScreen) return;
         sword = PlayerController.player.GetComponent<SwordController>();
         sword.onDurabilityChanged += PlayerDurabilityChanged;
+        UpdateSword(sword.durability / sword.maxDurability);
     }
 
     void PlayerDurabilityChanged(float durability, float prevDurability, float maxDurability)
     {
-        float d = durability / maxDurability;
-        bar.fillAmount = d * (1-minFill) + minFill;
-        if (d < 0.95f)
+        UpdateSword(durability / maxDurability);
+    }
+
+    public void UpdateSword(float durabilityPct)
+    {
+        bar.fillAmount = durabilityPct * (1-minFill) + minFill;
+        if (durabilityPct < 0.95f)
         {
             tip.enabled = true;
             tip.sprite = tipSprites[Random.Range(0, tipSprites.Length)];
             RectTransform t = tip.GetComponent<RectTransform>();
-            float x = Mathf.Lerp(emptyX, fullX, d);
+            float x = Mathf.Lerp(emptyX, fullX, durabilityPct);
             t.anchoredPosition = new Vector2(x, 0);
         }
         else
