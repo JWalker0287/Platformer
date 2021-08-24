@@ -53180,6 +53180,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1434571574057646651, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2557436188324217546, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -53626,6 +53630,10 @@ PrefabInstance:
     - target: {fileID: 6895077435874588654, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -79.986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408899212327089548, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+      propertyPath: damageTriggerName
+      value: TakeDamage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
