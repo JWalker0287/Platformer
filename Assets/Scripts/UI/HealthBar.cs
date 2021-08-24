@@ -20,9 +20,9 @@ public class HealthBar : MonoBehaviour
         UpdateHearts(Mathf.RoundToInt(h.health));
     }
 
-    void OnDestroy ()
+    void OnDisable ()
     {
-        if (inFileSelectScreen) return;
+        if (inFileSelectScreen || PlayerController.player == null) return;
         HealthController h = PlayerController.player.GetComponent<HealthController>();
         h.onHealthChanged -= PlayerHealthChanged;
     }

@@ -42,8 +42,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static void ResetGame ()
+    {
+        game.gameOverScreen.gameObject.SetActive(false);
+    }
+
     public static void GameOver()
     {
+        if (game == null) return;
         game.gameOverScreen.Setup(game.points);
     }
 }

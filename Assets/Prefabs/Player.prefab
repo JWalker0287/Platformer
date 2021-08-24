@@ -234,8 +234,8 @@ GameObject:
   - component: {fileID: 7408899212327089548}
   - component: {fileID: 8968844802759405547}
   - component: {fileID: 926387386190159892}
-  - component: {fileID: 6320586502035980241}
   - component: {fileID: 2336036104416478500}
+  - component: {fileID: 8337801149436162777}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -429,22 +429,6 @@ MonoBehaviour:
   spawnInvincible: 0
   restoreOnEnable: 0
   _maxMana: 15
---- !u!114 &6320586502035980241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770321697876695265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3d77b707150d744894157f364f52cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restoreTime: 3
-  spawnInvincible: 0
-  restoreOnEnable: 0
-  _maxDurability: 10
 --- !u!114 &2336036104416478500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +448,18 @@ MonoBehaviour:
     m_Bits: 1024
   jumpPuffParticles: JumpPuff
   jumpSmearParticles: Smear
+--- !u!114 &8337801149436162777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770321697876695265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41f1ec4bd55c6438c2a152b1794b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1908046676556395152
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +503,7 @@ GameObject:
   - component: {fileID: 8563863164055732721}
   - component: {fileID: 2851297485300700544}
   - component: {fileID: 1864174684773525845}
+  - component: {fileID: 1253482053}
   m_Layer: 8
   m_Name: swoosh
   m_TagString: Untagged
@@ -650,6 +647,22 @@ PolygonCollider2D:
       - {x: 0.21805334, y: -0.42812094}
       - {x: 0.5670117, y: -0.38124594}
       - {x: 0.8951367, y: -0.2822876}
+--- !u!114 &1253482053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975766226808118194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d77b707150d744894157f364f52cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restoreTime: 3
+  spawnInvincible: 0
+  restoreOnEnable: 0
+  _maxDurability: 3
 --- !u!1 &2125163625747135340
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +970,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.8509804}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.5803922}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -2055,8 +2068,8 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 6554
-        atime2: 53199
+        atime1: 1349
+        atime2: 17733
         atime3: 65535
         atime4: 0
         atime5: 0

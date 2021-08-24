@@ -9,8 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseRoot;
 
     public static bool paused {
-        get { return instance.pauseRoot.activeSelf; }
-        set { instance.pauseRoot.SetActive(value); }
+        get { return instance != null && instance.pauseRoot.activeSelf; }
+        set { if (instance != null) instance.pauseRoot.SetActive(value); }
     }
 
     void Awake ()

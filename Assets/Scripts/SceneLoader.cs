@@ -86,6 +86,7 @@ public class SceneLoader : MonoBehaviour
 
         PlayerController.player.transform.position = PlayerController.player.defaultPosition;
         CameraController.instance.SetPosition();
+        GameManager.ResetGame();
         
         yield return StartCoroutine(FinishTransitionCoroutine());
     }
@@ -131,7 +132,7 @@ public class SceneLoader : MonoBehaviour
         magic.maxMana = saveState.maxMana;
         magic.mana = saveState.mana;
 
-        SwordController sword = PlayerController.player.GetComponent<SwordController>();
+        SwordController sword = PlayerController.player.GetComponentInChildren<SwordController>();
         sword.maxDurability = saveState.maxDurability;
         sword.durability = saveState.durability;
 
