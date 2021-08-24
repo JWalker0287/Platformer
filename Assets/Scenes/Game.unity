@@ -44459,6 +44459,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1187036417492542838, guid: 630474afa7920444aab1c59e3c1b463e, type: 3}
   m_PrefabInstance: {fileID: 1753666388}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1807445925 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4871577588209006733, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+  m_PrefabInstance: {fileID: 6090069091723306939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1810722045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53552,6 +53557,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1253482053, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+      propertyPath: sword
+      value: 
+      objectReference: {fileID: 1807445925}
+    - target: {fileID: 1253482053, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+      propertyPath: swordSprite
+      value: 
+      objectReference: {fileID: 378531380435602873, guid: 18ca99cf608da534ebca8572aa84fa65, type: 3}
+    - target: {fileID: 1253482053, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+      propertyPath: brokenSwordSprite
+      value: 
+      objectReference: {fileID: -6397580684248803054, guid: 18ca99cf608da534ebca8572aa84fa65, type: 3}
     - target: {fileID: 1770321697876695265, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -53603,6 +53620,14 @@ PrefabInstance:
     - target: {fileID: 6334544760225102949, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 139.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664203963754960667, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.704
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664203963754960667, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.534
       objectReference: {fileID: 0}
     - target: {fileID: 6746319465457411022, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
       propertyPath: m_RootOrder
