@@ -17,7 +17,7 @@ public class GameOverScreen : MonoBehaviour
     public void RestartButton()
     {
         PlayerController.Revive();
-        GameManager.ReloadScene();
+        SceneLoader.ReloadLevel();
     }
 
 }

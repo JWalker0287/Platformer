@@ -11,6 +11,6 @@ public class DoorController : Interactable
 
     public override void Interact()
     {
-        GameManager.OpenDoor(destinationID, scene);
+        SceneLoader.OpenDoor(destinationID, scene);
     }
 }

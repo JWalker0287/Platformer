@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D body;
     ProjectileLauncher fireball;
     MagicController magic;
-    SwordController sDurability;
+    SwordController sword;
     HealthController health;
     Animator anim;
 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             body = GetComponent<Rigidbody2D>();
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
-            sDurability = GetComponent<SwordController>();
+            sword = GetComponentInChildren<SwordController>();
             anim = GetComponent<Animator>();
         }
         else 
@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.paused) return;
+        
         InteractCheck();
         float x = Input.GetAxis("Horizontal");
         motor.Move(x);
@@ -88,20 +90,15 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("magic");
         }
         
-        if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
+        if (Input.GetButtonDown("Fire1")) 
         {
-            sDurability.UsedSword();
+            anim.SetInteger("swordDurability", Mathf.RoundToInt(sword.durability));
             anim.SetTrigger("sword");
         }
 
         ParticleSystem.EmissionModule emission = dustTrailParticles.emission;
         emission.enabled = ( motor.onGround && Mathf.Abs(body.velocity.x) > 2) || 
                            (!motor.onGround && body.velocity.y > 1);
-    }
-
-    public void PlaySound (string sfx)
-    {
-        AudioManager.PlayVariedEffect(sfx);
     }
 
     void OnCollisionEnter2D (Collision2D c)

@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 8336995356883005003}
   - component: {fileID: 1712877525413496}
   - component: {fileID: 7796364626629820869}
+  - component: {fileID: 8094490974495477526}
   m_Layer: 7
   m_Name: Skeleton
   m_TagString: Untagged
@@ -511,6 +512,20 @@ MonoBehaviour:
   envLayer:
     serializedVersion: 2
     m_Bits: 1024
+  jumpPuffParticles: JumpPuff
+  jumpSmearParticles: Smear
+--- !u!114 &8094490974495477526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770321697876695265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff41f1ec4bd55c6438c2a152b1794b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1776675216484522923
 GameObject:
   m_ObjectHideFlags: 0
