@@ -65,6 +65,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 387093554748832546, guid: f70007841eb52494db11cb1f2b595d00, type: 3}
   - {fileID: 1457989808254898775, guid: dfac245b3bfa4a14f8d390a74df5e848, type: 3}
+  - {fileID: 5169509336173713039, guid: 3fc0b91bbc18fa14ca514a314cbee670, type: 3}
   poolStartSize: 10
 --- !u!114 &4599548934694721753
 MonoBehaviour:
