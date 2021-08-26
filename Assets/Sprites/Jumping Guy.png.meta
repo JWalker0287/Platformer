@@ -1,0 +1,480 @@
+fileFormatVersion: 2
+guid: 321f09e6ca02dd040a9797994a74c16d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5354115817685216218
+    second: Jumping Guy_0
+  - first:
+      213: 2616814065651160007
+    second: Jumping Guy_1
+  - first:
+      213: -8095319504374656359
+    second: Jumping Guy_2
+  - first:
+      213: -3642865923779600541
+    second: Jumping Guy_3
+  - first:
+      213: 9157452646337350782
+    second: Jumping Guy_4
+  - first:
+      213: 1188164721178672945
+    second: Jumping Guy_5
+  - first:
+      213: -5900522180921640247
+    second: Jumping Guy_6
+  - first:
+      213: -5439964999344146177
+    second: Jumping Guy_7
+  - first:
+      213: -1617431384675763238
+    second: Jumping Guy_8
+  - first:
+      213: 6641321813950996024
+    second: Jumping Guy_9
+  - first:
+      213: -2743784592510541871
+    second: Jumping Guy_10
+  - first:
+      213: -5827027012175382169
+    second: Jumping Guy_11
+  - first:
+      213: 1220237453804810379
+    second: Jumping Guy_12
+  - first:
+      213: -6096331051423115158
+    second: Jumping Guy_13
+  - first:
+      213: -5103366829255325157
+    second: Jumping Guy_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jumping Guy_0
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 956
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb6d6708f3ad4a40800000000000000
+      internalID: 5354115817685216218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_1
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 723
+        width: 227
+        height: 330
+      alignment: 9
+      pivot: {x: 0.91559297, y: 0.03544885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3126a378ac05420800000000000000
+      internalID: 2616814065651160007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_2
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 735
+        width: 268
+        height: 345
+      alignment: 9
+      pivot: {x: 0.558166, y: 0.0077933935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99215763dc5a7af80800000000000000
+      internalID: -8095319504374656359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_3
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 704
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fddb83eb0f17dc0800000000000000
+      internalID: -3642865923779600541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_4
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 312
+        width: 355
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c0660e9aec51f70800000000000000
+      internalID: 9157452646337350782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_5
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 687
+        width: 461
+        height: 176
+      alignment: 9
+      pivot: {x: 0.03444104, y: 0.111385345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f718cc4853d7010800000000000000
+      internalID: 1188164721178672945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_6
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 631
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca3ad8b6522d1ea0800000000000000
+      internalID: -5900522180921640247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_7
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 402
+        width: 264
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8b88fb7ac5184b0800000000000000
+      internalID: -5439964999344146177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_8
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 506
+        width: 15
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb35d3a9babd89e0800000000000000
+      internalID: -1617431384675763238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_9
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 110
+        width: 198
+        height: 336
+      alignment: 9
+      pivot: {x: 0.89308184, y: 0.8158693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e1a97a007ba2c50800000000000000
+      internalID: 6641321813950996024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_10
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 110
+        width: 174
+        height: 316
+      alignment: 9
+      pivot: {x: 0.039145283, y: 0.8582518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df1837437e1ce9d0800000000000000
+      internalID: -2743784592510541871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_11
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 387
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7693eaa2ecd322fa0800000000000000
+      internalID: -5827027012175382169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_12
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 154
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80b9a7cf772fe010800000000000000
+      internalID: 1220237453804810379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_13
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 114
+        width: 49
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68ddbe553b756ba0800000000000000
+      internalID: -6096331051423115158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping Guy_14
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 152
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a89b758e23d29b0800000000000000
+      internalID: -5103366829255325157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
