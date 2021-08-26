@@ -132,6 +132,7 @@ MonoBehaviour:
   particlePrefabs:
   - {fileID: 1437946671110696395, guid: 67726251d8a721b4ebe411ad1395affb, type: 3}
   - {fileID: 4737378293140177201, guid: c8bf0b3c35fb65f47b72c3308f2eaee4, type: 3}
+  - {fileID: 1707061577701894177, guid: 97124aed1b816684faee864d9a904b03, type: 3}
   poolSize: 15
 --- !u!1001 &1434571573735321625
 PrefabInstance:

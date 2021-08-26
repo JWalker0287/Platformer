@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 405424297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471097539}
   - component: {fileID: 471097538}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftFootSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 523926329}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 708582394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: leftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966395949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1382272526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624324811}
   - component: {fileID: 1624324812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1774556437}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2040582576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2077011727}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2129670747}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897479905652591408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: leftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2040582576}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6335.299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6695.299}
 --- !u!1 &2314009344592116315
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8217826678385864495}
   - component: {fileID: 4514328818180465033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightFootSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 652919975478028728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5763596418565684835}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5121745982350002034}
   - component: {fileID: 1418583514594965933}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftHandSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7463718045751404950}
   - component: {fileID: 1444639044528084352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightHandSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 8123372529073985946}
   - component: {fileID: 8123372529073985941}
   - component: {fileID: 1765828472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_LegLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8123372529084496474}
   - component: {fileID: 8123372529084496469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 8123372529220877939}
   - component: {fileID: 8123372529220877938}
   - component: {fileID: 1656684703}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_LegRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 8123372529547194072}
   - component: {fileID: 8123372529547194075}
   - component: {fileID: 1292685366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_ArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8123372529584192446}
   - component: {fileID: 8123372529584192441}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_Lance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 8123372529934921608}
   - component: {fileID: 8123372529934921611}
   - component: {fileID: 875598182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_ArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,9 @@ GameObject:
   - component: {fileID: 4432864887364838422}
   - component: {fileID: 6657115570885232714}
   - component: {fileID: 9073784538427499510}
-  m_Layer: 0
+  - component: {fileID: 7276906000797952096}
+  - component: {fileID: 6778183847978904411}
+  m_Layer: 7
   m_Name: FlyingLancer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,6 +1420,58 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7276906000797952096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123372529990031143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31839d8b31cce4d798caa4e0d9e650d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreTags: []
+  damageSoundName: 
+  deathSoundName: 
+  resurectionSoundName: 
+  destructionSoundName: 
+  damageParticlesName: 
+  deathParticlesName: 
+  destructionParticlesName: 
+  destructionSpawnName: 
+  anim: {fileID: 4432864887364838422}
+  damageTriggerName: takeDamage
+  deathTriggerName: 
+  resurectionTriggerName: 
+  audioSpatialBlend: 0
+  recoveryTime: 3
+  spawnInvincible: 0
+  healOnEnable: 0
+  _maxHealth: 3
+  destructionHealth: 0
+--- !u!114 &6778183847978904411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123372529990031143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ae274168be4981a4abf1df610a69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  outwardForce: 0
+  damage: 1
+  multiplier: 1
+  disableOnCollision: 0
+  affectAncestor: 0
+  allowRecovery: 1
+  hitSoundName: 
+  ignoreTags: []
 --- !u!1 &8123372530345583909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,7 +1482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8123372530345583908}
   - component: {fileID: 8123372530345583911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_Wing (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1510,7 +1564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8123372530621446402}
   - component: {fileID: 8123372530621446429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1592,7 +1646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8123372530816258251}
   - component: {fileID: 8123372530816258250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlyingLancer_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

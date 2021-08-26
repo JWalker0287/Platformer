@@ -7,6 +7,7 @@ public class FlyingLancerController : MonoBehaviour
 {
     public float idleSpeed = 2;
     public float idleRange = 5;
+    public float dashSpeed = 15;
     public float followRadius = 10;
     public float interval = 1;
     public float throwOffset = 4;
@@ -33,7 +34,6 @@ public class FlyingLancerController : MonoBehaviour
         Vector2 pos = transform.position;
         while (enabled)
         {
-            Debug.Log("HERE");
             Vector2 targetPos = pos + Random.insideUnitCircle * idleRange;
             for (float t = 0; t <= interval; t += Time.deltaTime)
             {
@@ -42,22 +42,31 @@ public class FlyingLancerController : MonoBehaviour
                 body.velocity = Vector2.Lerp(body.velocity, dir * idleSpeed, Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
-            Vector3 diff = PlayerController.player.transform.position - transform.position;
+            
+            Vector3 diff = PlayerController.player.transform.position - transform.position - Vector3.up;
+            float sign = Mathf.Sign(diff.x);
             if (diff.sqrMagnitude < followRadius * followRadius)
             {
-                float sign = Mathf.Sign(diff.x);
                 transform.right = Vector3.right * sign;
-                pos = PlayerController.player.transform.position + (Vector3.up - Vector3.right * sign) * throwOffset;
+                pos = (Vector2)PlayerController.player.transform.position - Vector2.right * sign * throwOffset;
+                if (Random.value < 0.75f) pos += Vector2.up * throwOffset;
+            }
+
+            if (Mathf.Abs(diff.y) < 1 && Mathf.Abs(diff.x) < followRadius * 0.5f)
+            {
+                anim.SetTrigger("dash");
+                yield return new WaitForSeconds(0.3f);
+                body.velocity = Vector2.right * sign * dashSpeed;
+                ParticleManager.Play("Dash", transform.position, body.velocity);
+                yield return new WaitForSeconds(1.5f);
             }
             
             diff = (Vector3)pos - transform.position;
             if (diff.sqrMagnitude < 1)
             {
                 anim.SetTrigger("throw");
-                yield return new WaitForSecondsRealtime(1);
+                yield return new WaitForSeconds(1);
             }
-            // if on same level, charge
-            // if above throw
         }
     }
 
