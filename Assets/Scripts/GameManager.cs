@@ -31,6 +31,25 @@ public class GameManager : MonoBehaviour
     void OnEnable ()
     {
         StartCoroutine(TimePlayedCoroutine());
+        HealthController.onAnyDeath += DramaticDeath;
+    }
+
+    void OnDisable ()
+    {
+        StartCoroutine(TimePlayedCoroutine());
+        HealthController.onAnyDeath -= DramaticDeath;
+    }
+
+    void DramaticDeath (HealthController health)
+    {
+        StartCoroutine(DramaticDeathCoroutine());
+    }
+
+    IEnumerator DramaticDeathCoroutine ()
+    {
+        Time.timeScale = 0.25f;
+        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 1;
     }
 
     IEnumerator TimePlayedCoroutine ()

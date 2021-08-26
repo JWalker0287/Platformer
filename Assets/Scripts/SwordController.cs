@@ -75,7 +75,6 @@ public class SwordController : MonoBehaviour
     public void Hit() {
         if (Time.time - lastHitTime < 0.1f) return;
 
-        Debug.Log("HERE");
         AudioManager.PlayVariedEffect("SwordHit");
         lastHitTime = Time.time;
 
