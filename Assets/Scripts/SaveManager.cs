@@ -43,7 +43,7 @@ public class SaveManager : MonoBehaviour
         saveState.mana = magic.mana;
         saveState.maxMana = magic.maxMana;
 
-        SwordController sword = PlayerController.player.GetComponent<SwordController>();
+        SwordController sword = PlayerController.player.GetComponentInChildren<SwordController>();
         saveState.durability = sword.durability;
         saveState.maxDurability = sword.maxDurability;
 
