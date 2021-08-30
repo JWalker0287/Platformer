@@ -801,6 +801,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5659007722833469806, guid: d1e00bb3d87fe7547b366d5ca99dd96e, type: 3}
   m_PrefabInstance: {fileID: 1379026159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1781935468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5659007722833469807, guid: d1e00bb3d87fe7547b366d5ca99dd96e, type: 3}
+  m_PrefabInstance: {fileID: 5659007722894706249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1781935472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781935468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4403c4bd24512574fbea8428cfe03956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionImage: {fileID: 0}
 --- !u!1001 &1988797276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -985,16 +1003,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 824255269}
     m_Modifications:
     - target: {fileID: 5659007722833469793, guid: d1e00bb3d87fe7547b366d5ca99dd96e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659007722833469793, guid: d1e00bb3d87fe7547b366d5ca99dd96e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1153876897}
+      objectReference: {fileID: 1781935472}
     - target: {fileID: 5659007722833469793, guid: d1e00bb3d87fe7547b366d5ca99dd96e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: NewGame
       objectReference: {fileID: 0}
     - target: {fileID: 5659007722833469793, guid: d1e00bb3d87fe7547b366d5ca99dd96e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuController, Assembly-CSharp
+      value: SceneLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5659007722833469793, guid: d1e00bb3d87fe7547b366d5ca99dd96e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
