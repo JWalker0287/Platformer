@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: df50e4c309985e74d8c0555c86fcfe79
+guid: 95a20f5b1965a0748952728192477688
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1200654140125226029
-    second: bb_Body
+    second: Boi
   - first:
       213: 2454105297936454054
-    second: bb_Bush
+    second: Bush
   - first:
       213: 8061122181456654364
-    second: bb_Leg_Back
+    second: BushBoiLegB
   - first:
       213: 1563822697128484942
-    second: bb_Leg_Front
+    second: BushBoiLegA
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,66 +100,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -175,15 +115,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bb_Body
+      name: Boi
       rect:
         serializedVersion: 2
-        x: 17
-        y: 418
-        width: 90
-        height: 69
-      alignment: 9
-      pivot: {x: 0.5042646, y: 0.105057865}
+        x: 18
+        y: 420
+        width: 88
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,15 +136,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bb_Bush
+      name: Bush
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 500
-        height: 500
+        x: 128
+        y: 402
+        width: 111
+        height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,15 +157,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bb_Leg_Back
+      name: BushBoiLegB
       rect:
         serializedVersion: 2
-        x: 74
-        y: 363
-        width: 19
-        height: 22
-      alignment: 9
-      pivot: {x: 0.23738821, y: 0.7616924}
+        x: 22
+        y: 366
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,15 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bb_Leg_Front
+      name: BushBoiLegA
       rect:
         serializedVersion: 2
-        x: 21
+        x: 74
         y: 364
-        width: 15
-        height: 18
-      alignment: 9
-      pivot: {x: 0.5511754, y: 0.7238922}
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -261,7 +201,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7a2ce383eeaec9d4eb6fd86bb4b67c90
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
