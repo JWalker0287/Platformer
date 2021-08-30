@@ -1,0 +1,10 @@
+<b>Team</b>
+Nolan Baker
+Jonathan Walker
+Robert Crutchfield
+Zack Lowe
+Ryan Ansus
+
+<b>Fonts</b>
+Playfair - Claus Eggers Sørensen (es@forthehearts.net)
+Forum - Denis Masharov (denis.masharov@gmail.com)

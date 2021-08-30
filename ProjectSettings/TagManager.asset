@@ -13,11 +13,11 @@ TagManager:
   - UI
   - Player
   - Enemies
-  - PlayerBullet
-  - EnemyBullet
+  - PlayerDamage
+  - EnemyDamage
   - Environment
-  - 
-  - 
+  - Light
+  - Interactable
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2437048241
+    locked: 0
+  - name: Environment
+    uniqueID: 2376770229
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 1737570739
+    locked: 0
+  - name: Foreground
+    uniqueID: 254094623
     locked: 0
