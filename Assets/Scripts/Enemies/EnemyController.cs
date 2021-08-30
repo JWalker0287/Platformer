@@ -6,6 +6,9 @@ public class EnemyController : MonoBehaviour
 {
     public float turnAroundTime = 0;
     public float turnAroundInterval = 3;
+
+    public float followRadius = 10;
+    public float attackRadius = 2;
     Vector2 leftRight;
     bool goingRight;
 
@@ -25,13 +28,13 @@ public class EnemyController : MonoBehaviour
         if (PlayerController.player == null) return;
 
         Vector2 diff =  PlayerController.player.transform.position - transform.position;
-        float distSq = diff.sqrMagnitude;
-        if (distSq < 2)
+        float xDist = Mathf.Abs(diff.x);
+        if (xDist < attackRadius)
         {
             if (anim) anim.SetTrigger("sword");
             leftRight.x = 0;
         }
-        else if(distSq < 10)
+        else if(xDist < followRadius)
         {
             if (anim) anim.ResetTrigger("sword");
             UpdateChase(diff);
@@ -58,5 +61,13 @@ public class EnemyController : MonoBehaviour
         d = d.normalized;
         transform.right = new Vector2(d.x,0);
         leftRight = new Vector2(d.x,0); 
+    }
+    
+    void OnDrawGizmos ()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, new Vector3(followRadius*2, 1, 0));
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, new Vector3(attackRadius*2, 1, 0));
     }
 }

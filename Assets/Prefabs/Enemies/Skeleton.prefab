@@ -362,7 +362,7 @@ Animator:
   m_GameObject: {fileID: 1770321697876695265}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 694fc26f4e511be49ba8621afb9945d3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1b7720817ce18a040a45e06edbbee79e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -406,6 +406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnAroundTime: 0
   turnAroundInterval: 3
+  followRadius: 5
+  attackRadius: 1
 --- !u!50 &7080946843209856566
 Rigidbody2D:
   serializedVersion: 4
