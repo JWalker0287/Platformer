@@ -50806,6 +50806,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1805655993648829971, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
+      propertyPath: prefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805655993648829971, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
+      propertyPath: prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 6603883476807779434, guid: 8f585aa5208756245b6d4c7196b45574, type: 3}
     - target: {fileID: 2226619670011905043, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: m_FillAmount
       value: 1
@@ -51128,6 +51136,10 @@ PrefabInstance:
     - target: {fileID: 2086765420283012502, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.6893819
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504845337685091179, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3569072631090193321, guid: 0d1d6c3810205894bafb968491cb8ab4, type: 3}
       propertyPath: m_LocalRotation.w
