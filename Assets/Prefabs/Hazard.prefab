@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3159936543546554613}
   - component: {fileID: 1002756817405521477}
   - component: {fileID: 2809227235511667081}
+  - component: {fileID: 6431641389327787549}
   m_Layer: 0
   m_Name: Hazard
   m_TagString: Untagged
@@ -130,8 +131,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &6431641389327787549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8570751822054411656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2e56c69d080d741bead61eb22e17f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inset: 0.1
 --- !u!1001 &5611393566110261924
 PrefabInstance:
   m_ObjectHideFlags: 0
