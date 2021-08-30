@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 297587321074165590}
   - component: {fileID: 297587321074165591}
   - component: {fileID: 4338288020987432606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaceGuard_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,8 +101,8 @@ MonoBehaviour:
   - {fileID: 1829009663159104021}
   - {fileID: 794649835856050431}
   m_Bounds:
-    m_Center: {x: -0.05262029, y: 0.053636104, z: 0}
-    m_Extent: {x: 0.119270995, y: 0.35962874, z: 0}
+    m_Center: {x: -0.12582959, y: 0.0045632124, z: 0}
+    m_Extent: {x: 0.1406522, y: 0.45186028, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &297587321503459436
@@ -119,7 +119,8 @@ GameObject:
   - component: {fileID: 8286807130407650081}
   - component: {fileID: 7365958445536939495}
   - component: {fileID: 5269392457905865469}
-  m_Layer: 0
+  - component: {fileID: 3994021460189466247}
+  m_Layer: 7
   m_Name: MaceGuard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,6 +139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 297587322022185893}
+  - {fileID: 8028198726690508156}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -153,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3717ccaac6ae0e6428488534ea3b7762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followRadius: 10
 --- !u!114 &5603975870974317800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +187,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -206,7 +209,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1}
+  m_Offset: {x: 0, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -238,6 +241,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3994021460189466247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297587321503459436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31839d8b31cce4d798caa4e0d9e650d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreTags: []
+  damageSoundName: 
+  deathSoundName: 
+  resurectionSoundName: 
+  destructionSoundName: 
+  damageParticlesName: 
+  deathParticlesName: 
+  destructionParticlesName: 
+  destructionSpawnName: 
+  anim: {fileID: 0}
+  damageTriggerName: 
+  deathTriggerName: 
+  resurectionTriggerName: 
+  audioSpatialBlend: 0
+  recoveryTime: 0
+  spawnInvincible: 0
+  healOnEnable: 0
+  _maxHealth: 10
+  destructionHealth: 0
 --- !u!1 &297587321509094727
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +283,7 @@ GameObject:
   - component: {fileID: 297587321509094724}
   - component: {fileID: 297587321509094725}
   - component: {fileID: 6513700846837805005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaceGuard_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,8 +373,8 @@ MonoBehaviour:
   - {fileID: 2761051674198112542}
   - {fileID: 1019422815907149045}
   m_Bounds:
-    m_Center: {x: 0.07215598, y: 0.019820869, z: 0}
-    m_Extent: {x: 0.32224688, y: 0.349282, z: 0}
+    m_Center: {x: 0.039915293, y: 0.02230364, z: 0}
+    m_Extent: {x: 0.29000598, y: 0.35176307, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &297587322003073437
@@ -353,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297587322003073410}
   - component: {fileID: 297587322003073411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaceGuard_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297587322022185893}
   - component: {fileID: 297587322022185898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaceGuard_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297587322022185892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 297587322003073410}
@@ -523,7 +557,7 @@ GameObject:
   - component: {fileID: 297587322395912627}
   - component: {fileID: 297587322395912624}
   - component: {fileID: 4837690671317373981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaceGuard_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,8 +647,8 @@ MonoBehaviour:
   - {fileID: 2857201193063698061}
   - {fileID: 6180072697877507443}
   m_Bounds:
-    m_Center: {x: 0.07631458, y: 0.041882336, z: 0}
-    m_Extent: {x: 0.1345247, y: 0.30582207, z: 0}
+    m_Center: {x: 0.15164615, y: 0.015203863, z: 0}
+    m_Extent: {x: 0.14914167, y: 0.45421743, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &297587322663017530
@@ -627,7 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297587322663017531}
   - component: {fileID: 297587322663017528}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaceGuard_Mace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +744,7 @@ GameObject:
   - component: {fileID: 297587322975387758}
   - component: {fileID: 297587322975387759}
   - component: {fileID: 1905712770994900545}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaceGuard_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,8 +834,8 @@ MonoBehaviour:
   - {fileID: 6427319309602160698}
   - {fileID: 4964061713196151333}
   m_Bounds:
-    m_Center: {x: -0.046687424, y: 0.0070753098, z: 0}
-    m_Extent: {x: 0.35745245, y: 0.50823367, z: 0}
+    m_Center: {x: -0.046687454, y: 0.0070753098, z: 0}
+    m_Extent: {x: 0.35745236, y: 0.50823385, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &323729964981872079
@@ -813,7 +847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 794649835856050431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,13 +861,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323729964981872079}
-  m_LocalRotation: {x: -0, y: -0, z: -0.20569845, w: 0.9786154}
-  m_LocalPosition: {x: 0.32676384, y: 0.000000044780613, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.026555117, w: 0.9996474}
+  m_LocalPosition: {x: 0.41044524, y: -0.0101082325, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1829009663159104021}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -23.741}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.043}
 --- !u!1 &3906867218989265574
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6180072697877507443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,13 +891,92 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3906867218989265574}
-  m_LocalRotation: {x: -0, y: -0, z: 0.115296945, w: 0.9933311}
-  m_LocalPosition: {x: 0.23240721, y: 0.00000001246525, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.07377884, w: 0.9972747}
+  m_LocalPosition: {x: 0.37143916, y: 0.008614153, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2857201193063698061}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13.242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.462}
+--- !u!1 &4585130553693721205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8028198726690508156}
+  - component: {fileID: 4639966006223883133}
+  - component: {fileID: 7512541867918568915}
+  m_Layer: 9
+  m_Name: MaceHit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8028198726690508156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585130553693721205}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.752, y: 0.322, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 297587321503459437}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4639966006223883133
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585130553693721205}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 4}
+  m_EdgeRadius: 0
+--- !u!114 &7512541867918568915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585130553693721205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ae274168be4981a4abf1df610a69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  outwardForce: 0
+  damage: 2
+  multiplier: 1
+  disableOnCollision: 0
+  affectAncestor: 1
+  allowRecovery: 1
+  hitSoundName: 
+  ignoreTags: []
 --- !u!1 &5265189527430231427
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1019422815907149045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,14 +1000,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5265189527430231427}
-  m_LocalRotation: {x: -0, y: -0, z: 0.6540001, w: 0.7564945}
+  m_LocalRotation: {x: -0, y: -0, z: 0.73830074, w: 0.67447174}
   m_LocalPosition: {x: 0.4788368, y: 0.0060701184, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 297587322663017531}
   m_Father: {fileID: 2761051674198112542}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 81.688}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 95.174}
 --- !u!1 &6807076558212178842
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +1017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2857201193063698061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,14 +1031,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6807076558212178842}
-  m_LocalRotation: {x: -0, y: -0, z: -0.6641067, w: 0.7476378}
-  m_LocalPosition: {x: -0.0055041313, y: 0.30648994, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7754932, w: 0.63135594}
+  m_LocalPosition: {x: 0.23996067, y: 0.36494416, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6180072697877507443}
   m_Father: {fileID: 297587322395912627}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -83.228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -101.7}
 --- !u!1 &7068809476653228609
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +1048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6427319309602160698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +1079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1829009663159104021}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +1094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7403812365281732632}
   m_LocalRotation: {x: 0, y: 0, z: -0.68980926, w: 0.7239912}
-  m_LocalPosition: {x: 0.010231972, y: 0.37582207, z: 0}
+  m_LocalPosition: {x: -0.023952961, y: 0.37587517, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 794649835856050431}
@@ -997,7 +1110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2761051674198112542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,7 +1141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4964061713196151333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
