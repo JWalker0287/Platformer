@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animations/BushBoi/BushBoiDeath.anim.meta
 guid: d6903aec859c01c419ca90b078bf5d66
+=======
+guid: 9a9e8807777471a4a9209d0dbdf3a03c
+>>>>>>> rcrutchfield:Assets/Animations/Jumping Guy/JumpingGuy_Attack.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
