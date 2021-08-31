@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: 1563822697128484942
     second: BushBoiLegA
+  - first:
+      213: 961569278774894827
+    second: BushSpikes
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -194,6 +197,27 @@ TextureImporter:
       bones: []
       spriteID: e4069022570d3b510800000000000000
       internalID: 1563822697128484942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BushSpikes
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 396
+        width: 140
+        height: 104
+      alignment: 9
+      pivot: {x: 0.4630465, y: 0.46556002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06e481a2e285d00800000000000000
+      internalID: 961569278774894827
       vertices: []
       indices: 
       edges: []

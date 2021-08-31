@@ -9,10 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2481707740159953824}
+  - component: {fileID: 4642431992342681028}
   - component: {fileID: 2481707740159953838}
   - component: {fileID: 2481707740159953839}
   - component: {fileID: 5233810163793087207}
-  m_Layer: 0
+  - component: {fileID: 213008120}
+  - component: {fileID: 213008119}
+  - component: {fileID: 213008121}
+  - component: {fileID: 213008122}
+  m_Layer: 7
   m_Name: BushBoi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +39,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4642431992342681028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481707740159953825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830b033950adb6a4c84e9b4f88f1f9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!210 &2481707740159953838
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -84,6 +101,97 @@ MonoBehaviour:
   naturalDirection: -1
   jumpPuffParticles: JumpPuff
   jumpSmearParticles: Smear
+--- !u!50 &213008120
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481707740159953825}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!58 &213008119
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481707740159953825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.44966203}
+  serializedVersion: 2
+  m_Radius: 0.45316023
+--- !u!114 &213008121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481707740159953825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ae274168be4981a4abf1df610a69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  outwardForce: 0
+  damage: 1
+  multiplier: 1
+  disableOnCollision: 0
+  affectAncestor: 0
+  allowRecovery: 1
+  hitSoundName: 
+  ignoreTags: []
+  anim: {fileID: 2481707740159953839}
+  animTrigger: attack
+--- !u!114 &213008122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481707740159953825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31839d8b31cce4d798caa4e0d9e650d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreTags: []
+  damageSoundName: 
+  deathSoundName: 
+  resurectionSoundName: 
+  destructionSoundName: 
+  damageParticlesName: 
+  deathParticlesName: 
+  destructionParticlesName: 
+  destructionSpawnName: 
+  anim: {fileID: 2481707740159953839}
+  damageTriggerName: takeDamage
+  deathTriggerName: death
+  resurectionTriggerName: 
+  audioSpatialBlend: 0
+  recoveryTime: 3
+  spawnInvincible: 0
+  healOnEnable: 0
+  _maxHealth: 3
+  destructionHealth: -1
 --- !u!1 &2481707740178791940
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707740178791939}
   - component: {fileID: 2481707740178791938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707740366012414}
   - component: {fileID: 2481707740366012413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707740419985937}
   - component: {fileID: 2481707740419985936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegA (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707740543500437}
   - component: {fileID: 2481707740543500436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegA (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707740600232421}
   - component: {fileID: 2481707740600232420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegA (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707740850529982}
   - component: {fileID: 2481707740850529981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegB (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707741111462220}
   - component: {fileID: 2481707741111462219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707741362107277}
   - component: {fileID: 2481707741362107276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707741419168204}
   - component: {fileID: 2481707741419168203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegB (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481707741652551537}
   - component: {fileID: 2481707741652551536}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BushBoiLegB (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
