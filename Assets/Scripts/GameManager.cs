@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
 
     void OnDisable ()
     {
-        StartCoroutine(TimePlayedCoroutine());
         HealthController.onAnyDeath -= DramaticDeath;
     }
 
