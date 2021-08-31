@@ -14,6 +14,9 @@ public class CharacterMotor : MonoBehaviour
         private set { _onGround = value; }
     }
 
+    [Tooltip("Does the character point to the right (1) or left (-1) normally")]
+    [Range(-1,1)] public int naturalDirection = 1;
+
     Rigidbody2D body;
     Animator anim;
     float xInput = 0;
@@ -54,7 +57,7 @@ public class CharacterMotor : MonoBehaviour
     {
         GroundCheck();
 
-        if (xInput != 0) transform.right = Vector2.right * xInput;
+        if (xInput != 0) transform.right = Vector2.right * xInput * naturalDirection;
 
         body.velocity = new Vector2(xInput * speed, body.velocity.y);
 
