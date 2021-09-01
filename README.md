@@ -12,3 +12,8 @@ standing in the moonlight.
  - Jonathan Walker - level design
  - Ryan Ansus - enemy AI
  - Robert Crutchfield - Modeling assets
+
+# Credits
+ -  Character Sprites by Craftpix.net Free and premium game assets
+ -  Sword design by: Saiba Saiba sword was used in the movie raabta, by actress kriti sanon.         The movie was released in june 2017.
+ 
