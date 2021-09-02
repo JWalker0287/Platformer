@@ -83,14 +83,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump")) motor.Jump();
         else if (Input.GetButtonUp("Jump")) motor.CancelJump();
 
-        if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
+        if (Input.GetButtonDown("Magic") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
         {
             fireball.Shoot(fireball.transform.right);
             magic.UsedMagic();
             anim.SetTrigger("magic");
         }
         
-        if (Input.GetButtonDown("Fire1")) 
+        if (Input.GetButtonDown("Sword")) 
         {
             anim.SetInteger("swordDurability", Mathf.RoundToInt(sword.durability));
             anim.SetTrigger("sword");

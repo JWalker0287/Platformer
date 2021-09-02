@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3771773717897740362}
   - component: {fileID: 1805655993648829971}
   - component: {fileID: 4599548934694721753}
-  - component: {fileID: 8808707754119117251}
   - component: {fileID: 5876126594335347784}
   m_Layer: 0
   m_Name: GameManager
@@ -65,6 +64,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 387093554748832546, guid: f70007841eb52494db11cb1f2b595d00, type: 3}
   - {fileID: 1457989808254898775, guid: dfac245b3bfa4a14f8d390a74df5e848, type: 3}
+  - {fileID: 387093554748832546, guid: 9ee60f0439e77f14d96e3c20bed5aa2f, type: 3}
   poolStartSize: 10
 --- !u!114 &4599548934694721753
 MonoBehaviour:
@@ -104,18 +104,6 @@ MonoBehaviour:
   sfxGroupPath: Master/SFX
   sfxSourcesCount: 5
   minPlayInterval: 0.01
---- !u!114 &8808707754119117251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3771773717897740363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c31f0634a2cb6344ba90f6a86cdb8518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5876126594335347784
 MonoBehaviour:
   m_ObjectHideFlags: 0
