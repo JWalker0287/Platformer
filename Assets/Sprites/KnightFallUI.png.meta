@@ -19,7 +19,7 @@ TextureImporter:
     second: Sword
   - first:
       213: -2798019304491590635
-    second: BrokenSwordC
+    second: BrokenSword
   - first:
       213: -4634536716981732061
     second: BrokenSwordD
@@ -28,10 +28,10 @@ TextureImporter:
     second: MagicMeterMask
   - first:
       213: 5901116053141101008
-    second: BrokenSwordA
+    second: BrokenSwordTip
   - first:
       213: 6190347678287559644
-    second: BrokenSwordB
+    second: SwordMask
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -238,13 +238,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BrokenSwordC
+      name: BrokenSword
       rect:
         serializedVersion: 2
-        x: 209
-        y: 375
-        width: 39
-        height: 47
+        x: 12
+        y: 253
+        width: 240
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,32 +259,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BrokenSwordD
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 375
-        width: 39
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32d7cc52961deafb0800000000000000
-      internalID: -4634536716981732061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: MagicMeterMask
       rect:
         serializedVersion: 2
-        x: 55
-        y: 174
+        x: 15
+        y: 144
         width: 102
         height: 103
       alignment: 0
@@ -301,15 +280,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BrokenSwordA
+      name: BrokenSwordTip
       rect:
         serializedVersion: 2
         x: 132
         y: 375
-        width: 38
+        width: 29
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.29, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,15 +301,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BrokenSwordB
+      name: SwordMask
       rect:
         serializedVersion: 2
         x: 170
         y: 375
-        width: 39
+        width: 25
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

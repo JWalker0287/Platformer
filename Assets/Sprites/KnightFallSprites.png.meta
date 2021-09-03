@@ -71,6 +71,9 @@ TextureImporter:
   - first:
       213: -4873241788855701574
     second: fuzzy_circle
+  - first:
+      213: -6397580684248803054
+    second: knight_broken_sword
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -8024,6 +8027,27 @@ TextureImporter:
       bones: []
       spriteID: abfaaae9964ce5cb0800000000000000
       internalID: -4873241788855701574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_broken_sword
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 14
+        width: 48
+        height: 95
+      alignment: 9
+      pivot: {x: 0.5257759, y: 0.12674606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2191375734a3737a0800000000000000
+      internalID: -6397580684248803054
       vertices: []
       indices: 
       edges: []

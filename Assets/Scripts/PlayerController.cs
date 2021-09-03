@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D body;
     ProjectileLauncher fireball;
     MagicController magic;
-    SwordController sDurability;
+    SwordController sword;
     HealthController health;
     Animator anim;
 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             body = GetComponent<Rigidbody2D>();
             fireball = GetComponentInChildren<ProjectileLauncher>();
             magic = GetComponent<MagicController>();
-            sDurability = GetComponent<SwordController>();
+            sword = GetComponentInChildren<SwordController>();
             anim = GetComponent<Animator>();
         }
         else 
@@ -75,33 +75,30 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.paused) return;
+        
         InteractCheck();
         float x = Input.GetAxis("Horizontal");
         motor.Move(x);
         if (Input.GetButtonDown("Jump")) motor.Jump();
         else if (Input.GetButtonUp("Jump")) motor.CancelJump();
 
-        if (Input.GetButtonDown("Fire2") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
+        if (Input.GetButtonDown("Magic") && magic.mana > 0 && fireball.Shoot(fireball.transform.right) > 0) 
         {
             fireball.Shoot(fireball.transform.right);
             magic.UsedMagic();
             anim.SetTrigger("magic");
         }
         
-        if (Input.GetButtonDown("Fire1") && sDurability.durability > 0) 
+        if (Input.GetButtonDown("Sword")) 
         {
-            sDurability.UsedSword();
+            anim.SetInteger("swordDurability", Mathf.RoundToInt(sword.durability));
             anim.SetTrigger("sword");
         }
 
         ParticleSystem.EmissionModule emission = dustTrailParticles.emission;
         emission.enabled = ( motor.onGround && Mathf.Abs(body.velocity.x) > 2) || 
                            (!motor.onGround && body.velocity.y > 1);
-    }
-
-    public void PlaySound (string sfx)
-    {
-        AudioManager.PlayVariedEffect(sfx);
     }
 
     void OnCollisionEnter2D (Collision2D c)

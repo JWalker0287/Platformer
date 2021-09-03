@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Paraphernalia.Components;
 
 public class SwordController : MonoBehaviour
 {
-   public delegate void OnDurabilityChanged(float durability, float prevDurability, float maxDurability);
+    public delegate void OnDurabilityChanged(float durability, float prevDurability, float maxDurability);
     public event OnDurabilityChanged onDurabilityChanged = delegate {};
 
     public delegate void OnAnyDurabilityChanged(SwordController swordController, float durability, float prevDurability, float maxDurability);
     public static event OnAnyDurabilityChanged onAnyDurabilityChanged = delegate {};
 
-    // [Range(0,1)] public float audioSpatialBlend = 0;
+    public SpriteRenderer sword;
+    public Sprite swordSprite;
+    public Sprite brokenSwordSprite;
 
     public float restoreTime = 3;
     private bool _isRestoring = false;
@@ -56,6 +59,8 @@ public class SwordController : MonoBehaviour
             }
         }
     }
+
+    float lastHitTime;
     
     void Start() {
         durability = maxDurability;
@@ -67,17 +72,32 @@ public class SwordController : MonoBehaviour
         else _isRestoring = false;
     }
 
-    public void UsedSword() {
-        if (!enabled) return;
-        // if (allowRestore && restoreTime > 0.001f && gameObject.activeInHierarchy) StartCoroutine("Restore");
-        durability -= 1.0f;
+    public void Hit() {
+        if (Time.time - lastHitTime < 0.1f) return;
 
+        AudioManager.PlayVariedEffect("SwordHit");
+        lastHitTime = Time.time;
+
+        if (durability == 0) return;    
+        durability -= 1.0f;
+        if (durability <= 0) 
+        {
+            AudioManager.PlayEffect("SwordBreak");
+            durability = 0;
+            sword.sprite = brokenSwordSprite;
+        }
+        else sword.sprite = swordSprite;
     }
 
     IEnumerator Restore () {
         _isRestoring = true;
         yield return new WaitForSeconds(restoreTime);
         _isRestoring = false;
+    }
+
+    void OnTriggerEnter2D()
+    {
+        Hit();
     }
     
 }
