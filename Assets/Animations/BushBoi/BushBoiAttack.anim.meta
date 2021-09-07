@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Animations/BushBoi/BushBoiAttack.anim.meta
 guid: 3f4fa8c0eef081245b19f7920a8869d2
 =======
 guid: 46d53760e322b6543be0787f8773becf
 >>>>>>> rcrutchfield:Assets/Animations/Jumping Guy/JumpingGuy_Alert.anim.meta
+=======
+guid: 3f4fa8c0eef081245b19f7920a8869d2
+>>>>>>> origin/zach
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000

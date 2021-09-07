@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Animations/BushBoi/BushBoi.controller.meta
 guid: 229330d4d04f08349ab3c37f79753b0f
 =======
 guid: ca77bb9eda85acb4bac62a4564ec8f1c
 >>>>>>> rcrutchfield:Assets/Animations/Jumping Guy/JumpGuy.controller.meta
+=======
+guid: 229330d4d04f08349ab3c37f79753b0f
+>>>>>>> origin/zach
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000

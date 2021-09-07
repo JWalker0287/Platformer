@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Animations/MaceGuard.meta
 guid: ba56d92cbf660f44aa9e0d02c931d77c
 =======
 guid: 812074a5249775544b57deb3e25ef5e9
 >>>>>>> zach:Assets/Animations/BushBoi.meta
+=======
+guid: 812074a5249775544b57deb3e25ef5e9
+>>>>>>> origin/zach
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
