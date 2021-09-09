@@ -101,7 +101,7 @@ MonoBehaviour:
   - {fileID: 1829009663159104021}
   - {fileID: 794649835856050431}
   m_Bounds:
-    m_Center: {x: -0.12583388, y: 0.0045632124, z: 0}
+    m_Center: {x: -0.12582625, y: 0.0045632124, z: 0}
     m_Extent: {x: 0.1406522, y: 0.45185933, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 4
-  followRadius: 10
+  followRadius: 8
 --- !u!114 &5603975870974317800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +174,7 @@ MonoBehaviour:
   envLayer:
     serializedVersion: 2
     m_Bits: 0
+  naturalDirection: 1
   jumpPuffParticles: JumpPuff
   jumpSmearParticles: Smear
 --- !u!50 &8286807130407650081
@@ -374,7 +375,7 @@ MonoBehaviour:
   - {fileID: 2761051674198112542}
   - {fileID: 1019422815907149045}
   m_Bounds:
-    m_Center: {x: 0.039914995, y: 0.022302687, z: 0}
+    m_Center: {x: 0.03991118, y: 0.02230364, z: 0}
     m_Extent: {x: 0.29000664, y: 0.35176307, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -649,7 +650,7 @@ MonoBehaviour:
   - {fileID: 6180072697877507443}
   m_Bounds:
     m_Center: {x: 0.15164424, y: 0.015203863, z: 0}
-    m_Extent: {x: 0.14914072, y: 0.45421743, z: 0}
+    m_Extent: {x: 0.14914453, y: 0.45421743, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &297587322663017530
@@ -835,8 +836,8 @@ MonoBehaviour:
   - {fileID: 6427319309602160698}
   - {fileID: 4964061713196151333}
   m_Bounds:
-    m_Center: {x: -0.046686262, y: 0.0070762634, z: 0}
-    m_Extent: {x: 0.35745117, y: 0.5082329, z: 0}
+    m_Center: {x: -0.046691984, y: 0.0070762634, z: 0}
+    m_Extent: {x: 0.35744926, y: 0.5082329, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &323729964981872079

@@ -22,17 +22,24 @@ public class MaceGuardController : MonoBehaviour
         if (xDist < attackRadius)
         {
             if (anim) anim.SetTrigger("Attack");
+            motor.Move(0);
         }
         else if(xDist < followRadius)
         {
             if (anim) anim.SetBool("EngagementRange", true);
-            if (anim) anim.SetTrigger("Alerted");
             motor.Move(diff.normalized.x);
         }
         else
         {
             if (anim) anim.SetBool("EngagementRange", false);
+            motor.Move(0);
         }
+    }
+
+    public void FacePlayer()
+    {
+        Vector2 diff =  PlayerController.player.transform.position - transform.position;
+        transform.right = new Vector2(diff.normalized.x,0);
     }
 
     void OnDrawGizmos ()
@@ -42,4 +49,5 @@ public class MaceGuardController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, new Vector3(attackRadius*2, 1, 0));
     }
+
 }
