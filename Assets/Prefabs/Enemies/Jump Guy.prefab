@@ -290,7 +290,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3151086793060942002}
-  m_LocalRotation: {x: 0, y: 0, z: -0.70159364, w: 0.71257734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.164132, y: -10.887415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -421,6 +421,7 @@ MonoBehaviour:
   envLayer:
     serializedVersion: 2
     m_Bits: 1024
+  naturalDirection: 1
   jumpPuffParticles: JumpPuff
   jumpSmearParticles: Smear
 --- !u!1 &3322881182702081273
