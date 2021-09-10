@@ -70,6 +70,10 @@ public class CharacterMotor : MonoBehaviour
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.05f, envLayer);
         onGround = (colliders.Length > 0);
+        colliders = Physics2D.OverlapCircleAll(transform.position+Vector3.right*0.25f, 0.05f, envLayer);
+        onGround = onGround | (colliders.Length > 0);
+        colliders = Physics2D.OverlapCircleAll(transform.position+Vector3.left*0.25f, 0.05f, envLayer);
+        onGround = onGround | (colliders.Length > 0);
         if (!onGround) anim.ResetTrigger("jump");
     }
 }

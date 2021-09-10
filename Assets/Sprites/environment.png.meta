@@ -4,10 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 7672064755138430786
-    second: blocks
+    second: fg_pike
   - first:
       213: -2744459860488241012
-    second: prop
+    second: bg_pike
+  - first:
+      213: 689176432287940110
+    second: fg_vine
+  - first:
+      213: -3465110836789601462
+    second: fg_spike
+  - first:
+      213: -7163797405583273556
+    second: fg_tombstone
+  - first:
+      213: -1112349361429245251
+    second: bg_vine
+  - first:
+      213: 2129779222011270706
+    second: bg_spike
+  - first:
+      213: 1984830909761902803
+    second: bg_sphere
+  - first:
+      213: 6397742363319337115
+    second: bg_tomb
+  - first:
+      213: -6225525426658374
+    second: bg_cube
+  - first:
+      213: 4165128164306938461
+    second: fg_sphere
+  - first:
+      213: -323903969209065456
+    second: fg_cube
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,16 +139,16 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blocks
+      name: fg_pike
       rect:
         serializedVersion: 2
-        x: 9
-        y: 618
-        width: 416
-        height: 398
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 101, y: 92, z: 101, w: 80}
+        x: 23
+        y: 638
+        width: 74
+        height: 353
+      alignment: 9
+      pivot: {x: 0.6374848, y: 0.029254513}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -130,15 +160,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prop
+      name: bg_pike
       rect:
         serializedVersion: 2
-        x: 510
-        y: 616
-        width: 107
-        height: 398
+        x: 512
+        y: 620
+        width: 93
+        height: 376
       alignment: 9
-      pivot: {x: 0.6044545, y: 0.07315508}
+      pivot: {x: 0.6226879, y: 0.073155016}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,6 +176,216 @@ TextureImporter:
       bones: []
       spriteID: c80c7433c48b9e9d0800000000000000
       internalID: -2744459860488241012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fg_vine
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 631
+        width: 45
+        height: 368
+      alignment: 9
+      pivot: {x: 0.4246382, y: 0.9607733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ef7125052709900800000000000000
+      internalID: 689176432287940110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fg_spike
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 815
+        width: 102
+        height: 171
+      alignment: 9
+      pivot: {x: 0.4999997, y: 0.8768104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b9cc98d0479efc0800000000000000
+      internalID: -3465110836789601462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fg_tombstone
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 817
+        width: 105
+        height: 163
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.10469664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1185d0734159c90800000000000000
+      internalID: -7163797405583273556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_vine
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 609
+        width: 74
+        height: 407
+      alignment: 9
+      pivot: {x: 0.4770854, y: 0.93745154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db290e536242090f0800000000000000
+      internalID: -1112349361429245251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_spike
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 791
+        width: 140
+        height: 215
+      alignment: 9
+      pivot: {x: 0.48788846, y: 0.8470158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2365df91bee7e8d10800000000000000
+      internalID: 2129779222011270706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_sphere
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 638
+        width: 148
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8d29342398b8b10800000000000000
+      internalID: 1984830909761902803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_tomb
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 798
+        width: 132
+        height: 206
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18721141}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b900e1268c859c850800000000000000
+      internalID: 6397742363319337115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_cube
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 646
+        width: 131
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22570486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab36768eae1e9eff0800000000000000
+      internalID: -6225525426658374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fg_sphere
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 650
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a6d756ff18dc930800000000000000
+      internalID: 4165128164306938461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fg_cube
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 662
+        width: 101
+        height: 100
+      alignment: 9
+      pivot: {x: 0.4832117, y: 0.12695862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01064fd5e03418bf0800000000000000
+      internalID: -323903969209065456
       vertices: []
       indices: 
       edges: []
