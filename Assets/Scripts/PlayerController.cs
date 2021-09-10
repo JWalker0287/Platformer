@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D body;
     ProjectileLauncher fireball;
     MagicController magic;
-    SwordController sword;
+    public SwordController sword;
     HealthController health;
     Animator anim;
 
