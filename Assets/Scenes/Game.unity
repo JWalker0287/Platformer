@@ -50701,12 +50701,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1805655993648829971, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: prefabs.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1805655993648829971, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: prefabs.Array.data[3]
       value: 
       objectReference: {fileID: 6603883476807779434, guid: 8f585aa5208756245b6d4c7196b45574, type: 3}
+    - target: {fileID: 1805655993648829971, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
+      propertyPath: prefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 387093554748832546, guid: 9ee60f0439e77f14d96e3c20bed5aa2f, type: 3}
     - target: {fileID: 2226619670011905043, guid: 0123c9c2e438468488559175d0cd1570, type: 3}
       propertyPath: m_FillAmount
       value: 1
