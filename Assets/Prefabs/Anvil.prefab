@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2815620917873677122}
   - component: {fileID: 7492715923783846399}
   m_Layer: 12
-  m_Name: AnvilPlaceHolder
+  m_Name: Anvil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
