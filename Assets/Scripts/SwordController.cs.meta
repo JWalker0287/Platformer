@@ -3,7 +3,10 @@ guid: b3d77b707150d744894157f364f52cf3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - sword: {instanceID: 0}
+  - swordSprite: {fileID: -8668390432781347103, guid: 3e774283c3bbc464397143d375c9505c, type: 3}
+  - brokenSwordSprite: {fileID: -2798019304491590635, guid: 3e774283c3bbc464397143d375c9505c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
