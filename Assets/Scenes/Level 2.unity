@@ -1569,8 +1569,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1923760360}
     - target: {fileID: 9220249205545345145, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220249205545345145, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
       propertyPath: field of view
-      value: 67
+      value: 26.991467
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220249205545345145, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220249205545345145, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220249205545345145, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220249205545345145, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220249205545345145, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2c5fe81d032bb4db97f8e52955e375, type: 3}
